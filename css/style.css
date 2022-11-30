@@ -5,16 +5,38 @@
     font-weight: normal;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
   .han{
-    font-family: 'Cafe24Ssurround';
-    font-size: large;
+    font-family: 'LINESeedKR-Bd';
+    font-size: x-large;
     margin: 5px 0px 20px 0px;
   }
   .subhan{
-    font-family: 'Cafe24Ssurround';
-    font-size: medium;
-    margin: 0px 0px 20px 0px;
+    font-family: 'LINESeedKR-Bd';
+    font-size: large;
+    margin: 0px 0px 5px 0px;
+    
+    /* color: black; */
   }
+  .pngs{
+    width: 40px;
+    top: 5%;
+  }
+  #cir {
+    position: absolute; 
+    /* right: 10%; */
+    /* top: 5%;  */
+    /* width: 200%;  */
+    /* height: 90%;  */
+    border-radius: 100%;
+    background: rgb(245, 229, 231);
+}
 
 /*GENERAL STYLE*/
 
@@ -228,10 +250,13 @@ a:active {
                       ABOUT
 ====================================================*/
   #about {
-      background-image: url(../img/blue_white_banner03.png); 
+      background-image: url(../img/blue_white_banner.png); 
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
+
+
+
   }
 
   #about h1 {
