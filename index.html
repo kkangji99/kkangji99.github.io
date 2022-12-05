@@ -27,12 +27,47 @@ License URL: https://creativecommons.org/licenses/by/4.0/
   <link href="css/devicons/css/devicons.min.css" rel="stylesheet">
   <link href="css/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/slide.css">
   <style>
     * {
       cursor: url(img/cat.png), auto !important;
     }
   </style>
+ <script>
+  //슬라이드쇼 함수 
+  function slideShow(project) {
+    for (var i = 1; i <= 38; i++) {
+      if (i == 1) {
+        document.writeln('<input type="radio" name="radio-btn" id=img-' + i + ' checked/>');
+      }
+      else {
+        document.writeln('<input type="radio" name="radio-btn" id=img-' + i + ' />');
+      }
+      document.writeln('<li class="slide-container">');
+      document.writeln('<div class="slide">');
+      document.writeln('<img src="img/project_img/' + project + '/PPT/' + i + '.png" />');
+      document.writeln('</div>');
+      document.writeln('<div class="nav">');
+      if (i == 38) {
+        document.writeln('<label for="img-' + (i - 1) + '" class="prev">&#x2039;</label>');
+        document.writeln('<label for="img-1" class="next">&#x203a;</label>');
 
+      }
+      else if (i == 1) {
+        document.writeln('<label for="img-38" class="prev">&#x2039;</label>');
+        document.writeln('<label for="img-' + (i + 1) + '" class="next">&#x203a;</label>');
+      }
+      else {
+        document.writeln('<label for="img-' + (i - 1) + '" class="prev">&#x2039;</label>');
+        document.writeln('<label for="img-' + (i + 1) + '" class="next">&#x203a;</label>');
+      }
+
+      document.writeln('</div>');
+      document.writeln('</li>');
+
+    }
+  }
+</script>
 </head>
 
 <body id="page-top">
@@ -878,36 +913,45 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6">
-                  <img class="img-fluid img-centered" src="img/portfolio/p-7.jpg" alt="">
+                <div class="col-md-6" style="padding-left: 0px;">
+                  <!-- <img class="img-fluid img-centered" src="img/portfolio/p-7.jpg" alt=""> -->
+                  <script>slideShow("second");</script>
                 </div>
-                <div class="col-md-6">
-                  <p>Our new Project every processes had become fragmented; meaning quality and service were
-                    inconsistent. This lack of standardization was adversely impacting operating costs, productivity and
-                    customer satisfaction. For several years now Payfast has worked strategically with innovations as a
-                    means of developing new solutions, products and services. In line with this vision, Success was
-                    approached to find new payments solutions to offer Payfast customers on their website, including
-                    open invoice and partial payments options.</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="#">Techs Soft</a>
+                <div class="col-md-6" style="padding-left: 200px;">
+                  <p class="han">🔷 핵심 융합 프로젝트 🔷</p>
+                  <div class="subhan">
+                    <p>🔹 IT 자격증 정보 제공 웹사이트</p>
+                    <ul>
+                      <li>IT 자격증 / 사용자 맞춤 자격증 정보 제공</li>
+                      <li>사용자 맞춤 시험 일정 캘린더 제공</li>
+                      <li>자격증 추천</li>
+                    </ul>
+                    <ul class="list-inline item-details">
+                      <li>🔹Task
+                        <strong>
+                      <li>- 백엔드 기능구현</li>
+                      <li>- DB 설계 및 구축</li>
+                      <li>- 데이터 수집 및 전처리</li>
                       </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="#">April 2018</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="#">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
-                  <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                    <i class="fa fa-times"></i> Close
-                  </button>
+                      </li>
+                      <br>
+                      <li>🔹Agency:
+                        <strong>
+                          <span href="https://smhrd.or.kr/">스마트인재개발원</span>
+                        </strong>
+                      </li>
+                      <li>🔹Date:
+                        <strong>
+                          <span>2022.09.04 ~ 2022.09.21</span>
+                          <!-- <a href="#">2022.09.04 ~ 2022.09.21</a> -->
+                        </strong>
+                      </li>
+
+                    </ul>
+                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                      <i class="fa fa-times"></i> Close
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1072,15 +1116,15 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 
       var x = event.pageX;
       var y = event.pageY;
-      
+
       // console.log("("+x+", "+y+")");
 
       var img = document.createElement("img");
-      img.setAttribute("src","img/cat.png")
+      img.setAttribute("src", "img/cat.png")
 
-      img.style.position="absolute";
-      img.style.left = x+"px";
-      img.style.top = y+"px";
+      img.style.position = "absolute";
+      img.style.left = x + "px";
+      img.style.top = y + "px";
 
       document.body.appendChild(img);
 

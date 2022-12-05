@@ -1,11 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 
 .slides {
-    padding: 0;
-    width: 609px;
-    height: 420px;
+    /* padding-left: -500px; */
+    width: 720px;
+    height: 405px;
     display: block;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     position: relative;
 }
 
@@ -25,8 +25,8 @@
 .slide {
     top: 0;
     opacity: 0;
-    width: 609px;
-    height: 420px;
+    width: 720px;
+    height: 405px;
     display: block;
     position: absolute;
 
@@ -41,10 +41,12 @@
 }
 
 .nav label {
-    width: 200px;
+    width: 5%;
     height: 100%;
     display: none;
     position: absolute;
+    top: 10px;
+    left: auto;
 
     opacity: 0;
     z-index: 9;
@@ -57,7 +59,7 @@
     text-align: center;
     line-height: 380px;
     font-family: "Varela Round", sans-serif;
-    background-color: rgba(255, 255, 255, .3);
+    /* background-color: rgba(255, 255, 255, .3); */
     text-shadow: 0px 0px 15px rgb(119, 119, 119);
 }
 
