@@ -34,6 +34,10 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     }
   </style>
  <script>
+  function VideoReset(name) {
+    name.pause();
+    name.currentTime = 0;
+  }
   //슬라이드쇼 함수 
   // function slideShow(project) {
   //   for (var i = 1; i <= 38; i++) {
@@ -766,7 +770,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
   <div class="portfolio-modal modal fade" id="third" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
+        <div class="close-modal" data-dismiss="modal" onclick="VideoReset(smartVideo03)">
           <div class="lr">
             <div class="rl"></div>
           </div>
@@ -782,7 +786,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
               </div>
               <div class="row">
                 <div class="col-md-6">
-                  <video  src="img/project_img/third/file/3차 프로젝트 시연영상.mp4" controls style="width: 100%; height: 100%; position: relative; top: -15%; margin:auto; display:block;">
+                  <video id="smartVideo03" src="img/project_img/third/file/3차 프로젝트 시연영상.mp4" controls style="width: 100%; height: 100%; position: relative; top: -15%; margin:auto; display:block;">
                     이 브라우저에서 지원하지 않는 영상입니다.
                   </video>
                   <br><br>
@@ -794,9 +798,9 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                       font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
                     .tg th{background-color:#409cff;border-color:#9ABAD9;border-style:solid;border-width:1px;color:#fff;
                       font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-                    .tg .tg-hagr{background-color:#d2e4fc;font-weight:bold;text-align:center;vertical-align:top}
-                    .tg .tg-oss5{background-color:#ebf5ff;text-align:left;vertical-align:top}
-                    .tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
+                    .tg .tg-hagr{background-color:#d2e4fc;font-weight:bold;text-align:center;vertical-align:middle}
+                    .tg .tg-oss5{background-color:#ebf5ff;text-align:left;vertical-align:middle}
+                    .tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:middle}
                     </style>
                     <table class="tg" style="undefined; table-layout: fixed; width: 422px">
                     <colgroup>
@@ -814,13 +818,13 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                       </tr>
                       <tr>
                         <td class="tg-hagr" rowspan="3">Explaination</td>
-                        <td class="tg-oss5">IT 자격증 / 사용자 맞춤 자격증 정보 제공</td>
+                        <td class="tg-oss5">MobileNet V2 모델을 활용한 이미지 검색</td>
                       </tr>
                       <tr>
-                        <td class="tg-oss5">사용자 맞춤 시험 일정 캘린더 제공</td>
+                        <td class="tg-oss5">크롤링 데이터 기반 공고 데이터셋 구축</td>
                       </tr>
                       <tr>
-                        <td class="tg-oss5">자격증 추천</td>
+                        <td class="tg-oss5">커뮤니티 기능으로 정보 공유 서비스 제공</td>
                       </tr>
                       <tr>
                         <td class="tg-hagr" rowspan="3">Task</td>
@@ -838,14 +842,14 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                       </tr>
                       <tr>
                         <td class="tg-hagr">Date</td>
-                        <td class="tg-oss5">2022.09.04 ~ 2022.09.21</td>
+                        <td class="tg-oss5">2022.10.03 ~ 2022.12.13</td>
                       </tr>
                     </tbody>
                     </table>
                     <ul></ul>
                   </div>
                   <div class="col-12">
-                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal" style=" width:100px; margin:auto; display:block;">
+                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal" style=" width:100px; margin:auto; display:block;" onclick="VideoReset(smartVideo03)">
                       <i class="fa fa-times"></i> Close
                     </button>
 
@@ -862,7 +866,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
   <div class="portfolio-modal modal fade" id="second" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
+        <div class="close-modal" data-dismiss="modal" onclick="VideoReset(smartVideo02)">
           <div class="lr">
             <div class="rl"></div>
           </div>
@@ -878,7 +882,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
               </div>
               <div class="row">
                 <div class="col-md-6">
-                  <video  src="img/project_img/second/file/자격증따조 시연영상.mp4" controls style="width: 100%; height: 100%; position: relative; top: -15%; margin:auto; display:block;">
+                  <video id="smartVideo02" src="img/project_img/second/file/자격증따조 시연영상.mp4" controls style="width: 100%; height: 100%; position: relative; top: -15%; margin:auto; display:block;">
                     이 브라우저에서 지원하지 않는 영상입니다.
                   </video>
                   <br><br>
@@ -890,9 +894,9 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                       font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
                     .tg th{background-color:#409cff;border-color:#9ABAD9;border-style:solid;border-width:1px;color:#fff;
                       font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-                    .tg .tg-hagr{background-color:#d2e4fc;font-weight:bold;text-align:center;vertical-align:top}
-                    .tg .tg-oss5{background-color:#ebf5ff;text-align:left;vertical-align:top}
-                    .tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
+                    .tg .tg-hagr{background-color:#d2e4fc;font-weight:bold;text-align:center;vertical-align:middle}
+                    .tg .tg-oss5{background-color:#ebf5ff;text-align:left;vertical-align:middle}
+                    .tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:middle}
                     </style>
                     <table class="tg" style="undefined;table-layout: fixed; width: 422px">
                     <colgroup>
@@ -972,7 +976,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 
                   </div>
                   <div class="col-12">
-                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal" style=" width:100px; margin:auto; display:block;">
+                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal" style=" width:100px; margin:auto; display:block;" onclick="VideoReset(smartVideo02)">
                       <i class="fa fa-times"></i> Close
                     </button>
 
@@ -989,7 +993,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
   <div class="portfolio-modal modal fade" id="first" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
+        <div class="close-modal" data-dismiss="modal" onclick="VideoReset(smartVideo01)">
           <div class="lr">
             <div class="rl"></div>
           </div>
@@ -1005,7 +1009,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
               </div>
               <div class="row">
                 <div class="col-md-6">
-                  <video  src="img/project_img/first/file/1차 시연영상.mp4" controls style="width: 100%; height: 100%; position: relative; top: -15%; margin:auto; display:block;">
+                  <video id="smartVideo01"  src="img/project_img/first/file/1차 시연영상.mp4" controls style="width: 100%; height: 100%; position: relative; top: -15%; margin:auto; display:block;">
                     이 브라우저에서 지원하지 않는 영상입니다.
                   </video>
                   <br><br>
@@ -1018,8 +1022,8 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                     .tg th{background-color:#409cff;border-color:#9ABAD9;border-style:solid;border-width:1px;color:#fff;
                       font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
                     .tg .tg-hagr{background-color:#d2e4fc;font-weight:bold;text-align:center;vertical-align:middle}
-                    .tg .tg-oss5{background-color:#ebf5ff;text-align:left;vertical-align:top}
-                    .tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
+                    .tg .tg-oss5{background-color:#ebf5ff;text-align:left;vertical-align:middle}
+                    .tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:middle}
                     </style>
                     <table class="tg" style="undefined; table-layout: fixed; width: 422px;  margin:auto; display:block;">
                     <colgroup>
@@ -1036,18 +1040,24 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                         <td class="tg-hagr" colspan="2">JDBC를 이용한 4지선다 영단어 게임</td>
                       </tr>
                       <tr>
-                        <td class="tg-hagr" rowspan="3">Explaination</td>
-                        <td class="tg-oss5">IT 자격증 / 사용자 맞춤 자격증 정보 제공</td>
+                        <td class="tg-hagr" rowspan="4">Explaination</td>
+                        <td class="tg-oss5">난이도 선택</td>
                       </tr>
                       <tr>
-                        <td class="tg-oss5">사용자 맞춤 시험 일정 캘린더 제공</td>
+                        <td class="tg-oss5">4지선다형 문제</td>
                       </tr>
                       <tr>
-                        <td class="tg-oss5">자격증 추천</td>
+                        <td class="tg-oss5">목숨 총 3개(오답 시 1개씩 차감)</td>
                       </tr>
                       <tr>
-                        <td class="tg-hagr" rowspan="3">Task</td>
+                        <td class="tg-oss5">연속으로 문제 맞힐 시 <br> 기본점수+1 (최대 5문제)</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-hagr" rowspan="4">Task</td>
                         <td class="tg-oss5">백엔드 기능구현</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-oss5">Command Line interface 구현</td>
                       </tr>
                       <tr>
                         <td class="tg-oss5">DB 설계 및 구축</td>
@@ -1061,14 +1071,14 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                       </tr>
                       <tr>
                         <td class="tg-hagr">Date</td>
-                        <td class="tg-oss5">2022.09.04 ~ 2022.09.21</td>
+                        <td class="tg-oss5">2022.07.12 ~ 2022.07.14</td>
                       </tr>
                     </tbody>
                     </table>
                     <ul></ul>
                   </div>
                   <div class="col-12">
-                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal" style=" width:100px; margin:auto; display:block;">
+                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal" style=" width:100px; margin:auto; display:block;" onclick="VideoReset(smartVideo01)">
                       <i class="fa fa-times"></i> Close
                     </button>
 
@@ -1103,12 +1113,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                   <img class="img-fluid img-centered" src="img/portfolio/p-9.jpg" alt="">
                 </div>
                 <div class="col-md-6">
-                  <p>Our new Project every processes had become fragmented; meaning quality and service were
-                    inconsistent. This lack of standardization was adversely impacting operating costs, productivity and
-                    customer satisfaction. For several years now Payfast has worked strategically with innovations as a
-                    means of developing new solutions, products and services. In line with this vision, Success was
-                    approached to find new payments solutions to offer Payfast customers on their website, including
-                    open invoice and partial payments options.</p>
+                  <p></p>
                   <ul class="list-inline item-details">
                     <li>Client:
                       <strong>
