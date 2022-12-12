@@ -1,10 +1,3 @@
-<!--
-author: Boostraptheme
-author URL: https://boostraptheme.com
-License: Creative Commons Attribution 4.0 Unported
-License URL: https://creativecommons.org/licenses/by/4.0/
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,6 +22,28 @@ License URL: https://creativecommons.org/licenses/by/4.0/
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="css/slide.css">
   <style>
+    .col-md-3:hover .skillDes{
+        opacity: 1;
+    }
+    .skillDes {
+      /* 지금 얘때문에 스크롤 생김 */
+      vertical-align: middle;
+      text-align: center;
+      padding: 0px 20px 20px 20px ;
+      background-color: #444444;
+      border-radius: 5px;
+      color: #ffffff;
+      position: absolute;
+      left: auto;
+      right: auto;
+      width: max-content;
+      opacity: 0;
+      transition: all ease 0.3s;
+      
+    }
+
+  </style>
+  <style>
     * {
       cursor: url(img/cat.png), auto !important;
     }
@@ -38,41 +53,6 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     name.pause();
     name.currentTime = 0;
   }
-  //슬라이드쇼 함수 
-  // function slideShow(project) {
-  //   for (var i = 1; i <= 38; i++) {
-  //     if (i == 1) {
-  //       document.writeln('<input  style="float: left; display: none;" type="radio" name="radio-btn" id=img-' + i + ' checked/>');
-  //     }
-  //     else {
-  //       document.writeln('<input style="float: left; display: none;" type="radio" name="radio-btn" id=img-' + i + ' />');
-  //     }
-  //     document.writeln('<li class="slide-container" >');
-  //     document.writeln('<div class="slide">');
-  //     document.writeln('<img src="img/project_img/' + project + '/PPT/' + i + '.png" />');
-  //     document.writeln('</div>');
-  //     document.writeln('<div class="nav">');
-  //     if (i == 38) {
-  //       document.writeln('<label for="img-' + (i - 1) + '" class="prev">&#x2039;</label>');
-  //       document.writeln('<label for="img-1" class="next">&#x203a;</label>');
-
-  //     }
-  //     else if (i == 1) {
-  //       document.writeln('<label for="img-38" class="prev">&#x2039;</label>');
-  //       document.writeln('<label for="img-' + (i + 1) + '" class="next">&#x203a;</label>');
-  //     }
-  //     else {
-  //       document.writeln('<label for="img-' + (i - 1) + '" class="prev">&#x2039;</label>');
-  //       document.writeln('<label for="img-' + (i + 1) + '" class="next">&#x203a;</label>');
-  //     }
-
-  //     document.writeln('</div>');
-  //     document.writeln('</li>');
-      
-  //   }
-
-  // }
-
 </script>
 </head>
 
@@ -144,8 +124,8 @@ License URL: https://creativecommons.org/licenses/by/4.0/
           <!-- <img class="pngs" src="img/mail.png" style="width: 5%; margin-right: 10px;" > -->
           <span class="subhan" style="max-width: 500px;">kkangji7239@gmail.com</span>
         </div>
-        <!-- 깃허브 버튼 -->
-        <div class="list-inline list-social-icons mb-0" style="position: absolute; top: 85%;">
+        <p></p>
+        <div class="list-inline list-social-icons mb-0">
           <a href="https://github.com/kkangji99">
             <span class="fa-stack fa-lg">
               <i class="fa fa-circle fa-stack-2x"></i>
@@ -154,6 +134,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
           </a>
         </div>
       </div>
+
     </section>
 
     <!--====================================================
@@ -434,44 +415,45 @@ License URL: https://creativecommons.org/licenses/by/4.0/
         <h3 class="text-center text-white">Coding Skills</h3>
         <div class="row text-center my-auto ">
 
-          <div class="col-md-2 col-sm-6">
+          <div class="col-md-3 col-sm-6">
             <div class="skill-item">
-              <i class="fa fa-html5 fa-5x"></i>
-              <!-- <h2><span class="counter"> 88 </span><span>%</span></h2> -->
+              <!-- <i class="fa fa-html5 fa-5x"></i> -->
+              <img src="img/SkillLogo/java .png" alt="" style="width: 60px; height: 60px;">
+              <p></p>
               <p>Java</p>
             </div>
-          </div>
-            <ul></ul>
-          <div class="col-md-2 col-sm-6">
+            <h2 class = "skillDes"><span class="subhan">Spring기반 MVC패턴을 이용해 서블릿 및 JSP 구현과 연계되어 동작시킬 수 있음</span></h2>
+        </div>
+
+          <div class="col-md-3 col-sm-6">
             <div class="skill-item">
-              <i class="fa fa-css3 fa-5x"></i>
+              <!-- <i class="fa fa-css3 fa-5x"></i> -->
+              <img src="img/SkillLogo/sql.png" alt="" style="width: 60px; height: 60px;">
+              <p></p>
               <!-- <h2><span class="counter"> 95 </span><span>%</span></h2> -->
               <p>SQL</p>
             </div>
+            <h2 class = "skillDes"><span class="subhan">MySQL/Oracle을 사용해 DB를 구축, 인덱스를 활용한 조회 가능</span></h2>
           </div>
-          <ul></ul>
-          <div class="col-md-2 col-sm-6">
+
+          <div class="col-md-3 col-sm-6">
             <div class="skill-item">
-              <i class="fa fa-code fa-5x"></i>
-              <!-- <h2><span class="counter"> 75 </span><span>%</span></h2> -->
-              <p>Spring</p>
-            </div>
-          </div>
-          <ul></ul>
-          <div class="col-md-2 col-sm-6">
-            <div class="skill-item">
-              <i class="fa fa-globe fa-5x"></i>
-              <!-- <h2><span class="counter"> 83 </span><span>%</span></h2> -->
+              <!-- <i class="fa fa-code fa-5x"></i> -->
+              <img src="img/SkillLogo/python.png" alt="" style="width: 60px; height: 60px;">
+              <p></p>
               <p>Python</p>
             </div>
+            <h2 class = "skillDes"><span class="subhan">기본적인 라이브러리 사용, 크롤링 자동화를 할 수 있음</span></h2>
           </div>
-          <ul></ul>
-          <div class="col-md-2 col-sm-6">
+
+          <div class="col-md-3 col-sm-6">
             <div class="skill-item">
-              <i class="fa fa-globe fa-5x"></i>
-              <!-- <h2><span class="counter"> 83 </span><span>%</span></h2> -->
+              <!-- <i class="fa fa-globe fa-5x"></i> -->
+              <img src="img/SkillLogo/unity.png" alt="" style="width: 60px; height: 60px;">
+              <p></p>
               <p>Unity</p>
             </div>
+            <h2 class = "skillDes"><span class="subhan">2D, 3D, VR, AR 콘텐츠를 제작 / 빌드 가능</span></h2>
           </div>
         </div>
       </div>
@@ -486,26 +468,24 @@ License URL: https://creativecommons.org/licenses/by/4.0/
           <h2 class="  text-center">Awards</h2>
           <div class="mb-5 heading-border"></div>
         </div>
-        <div class="main-award" id="award-box">
+        <div class="main-award" id="award-box" style="margin:auto; display:block;">
           <div class="award">
             <div class="award-icon"></div>
-            <div class="award-content">
-              <span class="date">Apr 2017 - Mar 2018</span>
-              <h5 class="title">Google Analytics Certified Developer</h5>
-              <p class="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis felis vitae risus pulvinar
-                tincidunt. Nam ac venenatis enim. Aenean hendrerit justo sed.
+            <div class="award-content" >
+              <span class="date">2021.12.02</span>
+              <h5 class="han">컴퓨터공학과 캡스톤디자인 작품 발표회</h5>
+              <p class="subhan">
+                2021학년도 컴퓨터공학과 캡스톤디자인 작품 발표회 최우수상
               </p>
             </div>
           </div>
           <div class="award">
             <div class="award-icon"></div>
             <div class="award-content">
-              <span class="date">Apr 2018 - Mar 2019</span>
-              <h5 class="title">Mobile Web Specialist - Google Certification</h5>
-              <p class="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis felis vitae risus pulvinar
-                tincidunt. Nam ac venenatis enim. Aenean hendrerit justo sed.
+              <span class="date">2022.12.15</span>
+              <h5 class="han">스마트인재개발원 모범인원</h5>
+              <p class="subhan">
+                스마트인재개발원 모범상
               </p>
             </div>
           </div>
