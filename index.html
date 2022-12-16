@@ -34,19 +34,21 @@
       border-radius: 5px;
       color: #ffffff;
       position: absolute;
-      left: auto;
-      right: auto;
+      top: 110%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: max-content;
       opacity: 0;
       transition: all ease 0.3s;
-      
+      z-index: 1;
+
     }
 
   </style>
   <style>
-    * {
+    /* * {
       cursor: url(img/cat.png), auto !important;
-    }
+    } */
   </style>
  <script>
   function VideoReset(name) {
@@ -202,7 +204,7 @@
                 </span></h4>
               <div class="subhan">
                 <p>순천대학교 산업협력교육센터</p>
-                <p>Unreal Engine으로 PC 전투 게임을 개발하여 빌드한 경험이 있습니다.</p>
+                <p>Unreal Engine으로 PC 전투 게임을 개발하여 <br> 빌드한 경험이 있습니다.</p>
                 <ul style="margin-left: -5%;">
                   <li>Unity Engine 사용</li>
                   <li>Unreal Engine 사용</li>
@@ -415,14 +417,14 @@
         <h3 class="text-center text-white">Coding Skills</h3>
         <div class="row text-center my-auto " >
 
-          <div class="col-md-3 col-sm-6">
+          <div class="col-md-3 col-sm-6" style="position: relative;">
             <div class="skill-item">
               <!-- <i class="fa fa-html5 fa-5x"></i> -->
               <img src="img/SkillLogo/java .png" alt="" style="width: 60px; height: 60px;">
               <p></p>
-              <p>Java</p>
+              <p style="font-weight: bold;">Java</p>
             </div>
-            <h2 class = "skillDes"><span class="subhan">Spring기반 MVC패턴을 이용해 서블릿 및 JSP 구현과 연계되어 동작시킬 수 있음</span></h2>
+            <h2 class = "skillDes"><span class="subhan">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤSpring기반 MVC패턴을 이용해 서블릿 및 JSP 구현과 연계되어 동작시킬 수 있음</span></h2>
         </div>
 
           <div class="col-md-3 col-sm-6">
@@ -431,7 +433,7 @@
               <img src="img/SkillLogo/sql.png" alt="" style="width: 60px; height: 60px;">
               <p></p>
               <!-- <h2><span class="counter"> 95 </span><span>%</span></h2> -->
-              <p>SQL</p>
+              <p style="font-weight: bold;">SQL</p>
             </div>
             <h2 class = "skillDes"><span class="subhan">MySQL/Oracle을 사용해 DB를 구축, 인덱스를 활용한 조회 가능</span></h2>
           </div>
@@ -441,7 +443,7 @@
               <!-- <i class="fa fa-code fa-5x"></i> -->
               <img src="img/SkillLogo/python.png" alt="" style="width: 60px; height: 60px;">
               <p></p>
-              <p>Python</p>
+              <p style="font-weight: bold;">Python</p>
             </div>
             <h2 class = "skillDes"><span class="subhan">기본적인 라이브러리 사용, 크롤링 자동화를 할 수 있음</span></h2>
           </div>
@@ -451,7 +453,7 @@
               <!-- <i class="fa fa-globe fa-5x"></i> -->
               <img src="img/SkillLogo/unity.png" alt="" style="width: 60px; height: 60px;">
               <p></p>
-              <p>Unity</p>
+              <p style="font-weight: bold;">Unity</p>
             </div>
             <h2 class = "skillDes"><span class="subhan">2D, 3D, VR, AR 콘텐츠를 제작 / 빌드 가능</span></h2>
           </div>
@@ -474,11 +476,13 @@
             <div class="award-icon"></div>
             <div class="award-content">
               <span class="date">2022.12.14</span>
-              <h5 class="han">DCX기반 빅데이터 분석서비스 개발자과정 실전융합프로젝트</h5>
+              <h5 class="han">실전융합프로젝트 최우수상</h5>
               <p class="subhan">
-                2021 K-디지털 핵심실무인재양성사업  DCX기반 빅데이터 분석서비스 개발자과정 실전융합프로젝트 최우수상
+                K-디지털 핵심실무인재양성사업 <br/>
+                DCX기반 빅데이터 분석서비스 <br/>
+                개발자과정 실전융합프로젝트 <br/> 최우수상
               </p>
-              <a href="#smartSaveTheAnimal" data-toggle="modal" class="subhan">
+              <a href="#smartSaveTheAnimal" data-toggle="modal" class="subhan" style="text-decoration-line : none;">
                 <img src="img/awards_img/gallery.png" alt="이미지로고" style="width: 8%;"> click!
               </a>
             </div>
@@ -488,11 +492,13 @@
             <div class="award-icon"></div>
             <div class="award-content" >
               <span class="date">2021.12.14</span>
-              <h5 class="han">DCX기반 빅데이터 분석서비스 개발자과정 Java Prograimng</h5>
+              <h5 class="han">성적우수상(Java P/G)</h5>
               <p class="subhan">
-                2021 K-디지털 핵심실무인재양성사업 DCX기반 빅데이터 분석서비스 개발자과정 Java Prograimng 성적우수상
+                K-디지털 핵심실무인재양성사업 <br/>
+                DCX기반 빅데이터 분석서비스 <br/>
+                개발자과정 Java Prograimng <br/>성적우수상
               </p>
-              <a href="#smartJava" data-toggle="modal" class="subhan">
+              <a href="#smartJava" data-toggle="modal" class="subhan" style="text-decoration-line : none;">
                 <img src="img/awards_img/gallery.png" alt="이미지로고" style="width: 8%;"> click!
               </a>
             </div>
@@ -502,11 +508,13 @@
             <div class="award-icon"></div>
             <div class="award-content" >
               <span class="date">2021.12.14</span>
-              <h5 class="han">DCX기반 빅데이터 분석서비스 개발자과정 JSP / Servlet</h5>
+              <h5 class="han">성적우수상(JSP/Servlet)</h5>
               <p class="subhan">
-                2021 K-디지털 핵심실무인재양성사업 DCX기반 빅데이터 분석서비스 개발자과정 JSP / Servlet 성적우수상
+                K-디지털 핵심실무인재양성사업
+                DCX기반 빅데이터 분석서비스
+                개발자과정 JSP / Servlet 성적우수상
               </p>
-              <a href="#smartJSP" data-toggle="modal" class="subhan">
+              <a href="#smartJSP" data-toggle="modal" class="subhan"  style="text-decoration-line : none;">
                 <img src="img/awards_img/gallery.png" alt="이미지로고" style="width: 8%;"> click!
               </a>
             </div>
@@ -516,11 +524,13 @@
             <div class="award-icon"></div>
             <div class="award-content">
               <span class="date">2022.12.14</span>
-              <h5 class="han">DCX기반 빅데이터 분석서비스 개발자과정</h5>
+              <h5 class="han">모범상</h5>
               <p class="subhan">
-                2021 K-디지털 핵심실무인재양성사업 DCX기반 빅데이터 분석서비스 개발자과정 모범상
+                K-디지털 핵심실무인재양성사업 <br/>
+                DCX기반 빅데이터 분석서비스 <br/>
+                개발자과정 모범상
               </p>
-              <a href="#smartGood" data-toggle="modal" class="subhan">
+              <a href="#smartGood" data-toggle="modal" class="subhan"  style="text-decoration-line : none;">
                 <img src="img/awards_img/gallery.png" alt="이미지로고" style="width: 8%;"> click!
               </a>
             </div>
@@ -534,8 +544,8 @@
               <p class="subhan">
                 2021학년도 컴퓨터공학과 캡스톤디자인 작품 발표회 최우수상
               </p>
-              <a href="#schoolAward01" data-toggle="modal" class="subhan">
-                <img src="img/awards_img/gallery.png" alt="이미지로고" style="width: 8%;"> click!
+              <a href="#schoolAward01" data-toggle="modal" class="subhan"  style="text-decoration-line : none;">
+                <img src="img/awards_img/gallery.png" alt="이미지로고" style="width: 8%;" href = "#schoolAward01"> click!
               </a>
             </div>
           </div>
@@ -1373,26 +1383,26 @@
     });
 
     // 마우스 클릭
-    const mouclick = document.documentElement;
-    mouclick.addEventListener('click', (event) => {
+    // const mouclick = document.documentElement;
+    // mouclick.addEventListener('click', (event) => {
 
-      var x = event.pageX;
-      var y = event.pageY;
+    //   var x = event.pageX;
+    //   var y = event.pageY;
 
-      // console.log("("+x+", "+y+")");
+    //   // console.log("("+x+", "+y+")");
 
-      var img = document.createElement("img");
-      img.setAttribute("src", "img/cat.png")
+    //   var img = document.createElement("img");
+    //   img.setAttribute("src", "img/cat.png")
 
-      img.style.position = "absolute";
-      img.style.left = x + "px";
-      img.style.top = y + "px";
+    //   img.style.position = "absolute";
+    //   img.style.left = x + "px";
+    //   img.style.top = y + "px";
 
-      document.body.appendChild(img);
+    //   document.body.appendChild(img);
 
 
-      $(img).fadeOut(1000);
-    });
+    //   $(img).fadeOut(1000);
+    // });
   </script>
 </body>
 
