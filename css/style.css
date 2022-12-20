@@ -148,12 +148,12 @@ a:active {
         max-width: 10rem;
         max-height: 10rem;
         border: 0.5rem solid rgba(255, 255, 255, 0.2);
-        transition: all 0.2s linear;
-        overflow: hidden;
+        /* transition: all 0.2s linear; */
+        /* overflow: hidden; */
     }
 
     .img-profile:hover {
-        transform: scale(1.2);
+        /* transform: scale(1.2); */
     }
 
     #sideNav .navbar-collapse {
@@ -291,6 +291,12 @@ section.resume-section .resume-item .resume-date {
     font-family: 'Roboto Condensed', sans-serif;
     text-transform: none;
     color: #555;
+}
+.card.mx-0.p-4.mb-5{
+    transition: all 0.2s linear;
+}
+.card.mx-0.p-4.mb-5:hover{
+    transform: scale(1.05);
 }
 
 /*====================================================
