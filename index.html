@@ -56,10 +56,10 @@
       name.currentTime = 0;
     }
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
 </head>
 
 <body id="page-top">
-
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none  mx-0 px-0"><img src="img/logo-white.png" alt="" class="img-fluid"></span>
@@ -92,13 +92,18 @@
     </ul>
   </nav>
 
-  <div class="container-fluid p-0">
 
     <!--====================================================
                         ABOUT
     ======================================================-->
 
     <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+
+      <!-- 오디오 -->
+      <!-- <audio autoplay controls loop style="position: fixed; top: 10%; right: 10%;">
+        <source src="audio/Six Seasons - Unicorn Heads.mp3" type="audio/mp3">
+      </audio> -->
+
       <div class="my-auto">
         <!-- <img src="img/logo-s.png" class="img-fluid mb-3" alt=""> -->
         <!-- 젤 큰 목록 -->
@@ -138,15 +143,7 @@
           <p class="subhan" style="max-width: 500px;">- 워드프로세서</p>
           <p class="subhan" style="max-width: 500px;">- ITQ(엑셀, 파워포인트, 아래 한글 - A등급)</p>
 
-          <br><br>
-          <div class="list-inline list-social-icons mb-0" >
-            <a href="https://github.com/kkangji99" >
-              <span class="fa-stack fa-lg" >
-                <i class="fa fa-circle fa-stack-2x" ></i>
-                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </div>  
+
         
         </div>
         
@@ -163,6 +160,32 @@
           <h2 class="  text-center">Experience</h2>
           <div class="mb-5 heading-border"></div>
         </div>
+
+        <div class="resume-item col-sm-12">
+          <!-- 웹프로그래머 경력 -->
+          <div class="card mx-0 p-4 mb-5"
+            style="border-color: #fd7e14; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21); height: 90%;">
+            <div class=" resume-content mr-auto">
+              <h4 class="mb-3"><i class="fa fa-globe mr-3 text-info"></i><span class="han">경력</span></h4>
+              <div class="subhan">
+                <p>(주)이니스트</p>
+                <p>대학학생역량이력 및 경력관리 시스템, GRC솔루션사업, 소프트웨어 R&D 컨텐츠를 주력으로하는 (주)이니스트에서 <span id="myPeriod"></span>간 근무한 경험이 있습니다.</p>
+                <ul style="margin-left: -3%;">
+                  <li>Spring Framework</li>
+                  <li>각종 대학교 학생/교수 역량 지원 프로그램 기능 개발</li>
+                  <li>관리자 프로그램 기능 개발</li>
+                  <li>유지/보수</li>
+                  <li>리포팅툴 사용</li>
+                  <li>실버서/테스트서버 반영 및 관리</li>
+                </ul>
+              </div>
+            </div>
+            <div class="resume-date text-md-right" style="position: absolute;top: 90%;  bottom: 5%; right: 2%;">
+              <span class="text-primary">2023.01 ~ ing</span>
+            </div>
+          </div>
+        </div>
+
         <div class="resume-item col-md-6 col-sm-12 ">
           <!-- 인턴 -->
           <div class="card mx-0 p-4 mb-5"
@@ -312,33 +335,43 @@
         <div class="col-md-12">
           <div class="port-head-cont">
             <button class="btn btn-general btn-green filter-b" data-filter="all">All</button>
-            <button class="btn btn-general btn-green filter-b" data-filter="webPro">Web Project</button>
-            <button class="btn btn-general btn-green filter-b" data-filter="gamePro">Game Project</button>
+            <button class="btn btn-general btn-green filter-b" data-filter="teamPro">Team Project</button>
+            <button class="btn btn-general btn-green filter-b" data-filter="perPro">Personal Project</button>
             <button class="btn btn-general btn-green filter-b" data-filter="ect">Ect</button>
           </div>
         </div>
       </div>
       <div class="row my-auto">
 
+        <!-- <div class="col-sm-4 portfolio-item filter perPro">
+          <a class="portfolio-link" href="#" data-toggle="modal">
+            <div class="caption-port">
+              <div class="caption-port-content">
+                <p class="subhan">Test</p>
+              </div>
+            </div>
+            <img class="img-fluid" src="" alt="">
+          </a>
+        </div> -->
 
-        <div class="col-sm-4 portfolio-item filter webPro">
+        <div class="col-sm-4 portfolio-item filter teamPro">
           <a class="portfolio-link" href="#third" data-toggle="modal">
             <div class="caption-port">
               <div class="caption-port-content">
                 <!-- <i class="fa fa-search-plus fa-3x"></i> -->
-                <p class="subhan">유기/유실 동물 <br>등록 및 찾기 서비스 <br>[Save The Animal]</p>
+                <p class="subhan">유기/유실 동물 <br>등록 및 찾기 서비스</p>
               </div>
             </div>
             <img class="img-fluid" src="img/project_img/third/file/메인 사이즈 조정 완료.png" alt="">
           </a>
         </div>
 
-        <div class="col-sm-4 portfolio-item filter webPro">
+        <div class="col-sm-4 portfolio-item filter teamPro">
           <a class="portfolio-link" href="#second" data-toggle="modal">
             <div class="caption-port">
               <div class=" caption-port-content">
                 <!-- <i class="fa fa-search-plus fa-3x"></i> -->
-                <p class="subhan" >IT 자격증 정보 제공<br>웹 서비스<br>[모두의 자격증]</p>
+                <p class="subhan" >IT 자격증 정보 제공<br>웹 서비스</p>
 
               </div>
             </div>
@@ -346,11 +379,11 @@
           </a>
         </div>
 
-        <div class="col-sm-4 portfolio-item filter webPro">
+        <div class="col-sm-4 portfolio-item filter teamPro">
           <a class="portfolio-link" href="#first" data-toggle="modal" >
             <div class="caption-port">
               <div class="caption-port-content">
-                <p class="subhan">4지선다형<br>영단어 콘솔 게임<br>[Word Master]</p>
+                <p class="subhan">4지선다형<br>영단어 콘솔 게임</p>
                 <!-- <i class="fa fa-search-plus fa-3x"></i> -->
               </div>
             </div>
@@ -368,6 +401,16 @@
         <h3 class="text-center text-white">Coding Skills</h3>
         <div class="row text-center my-auto ">
 
+          <div class="col-md-3 col-sm-6">
+            <div class="skill-item">
+              <!-- <i class="fa fa-globe fa-5x"></i> -->
+              <img src="img/SkillLogo/spring.png" alt="" style="width: 60px; height: 60px;">
+              <p></p>
+              <p style="font-weight: bold;">Spring / JSP</p>
+            </div>
+            <h2 class="skillDes"><span class="subhan">스프링 프레임워크를 활용한 간단한 프로젝트 제작 가능</span></h2>
+          </div>
+
           <div class="col-md-3 col-sm-6" style="position: relative;">
             <div class="skill-item">
               <!-- <i class="fa fa-html5 fa-5x"></i> -->
@@ -375,8 +418,7 @@
               <p></p>
               <p style="font-weight: bold;">Java</p>
             </div>
-            <h2 class="skillDes"><span class="subhan">Spring기반 MVC패턴을 이용해<br>서블릿 및 JSP 구현과 연계되어 동작시킬 수
-                있음</span></h2>
+            <h2 class="skillDes"><span class="subhan">기본적인 라이브러리 사용 가능</span></h2>
           </div>
 
           <div class="col-md-3 col-sm-6">
@@ -398,16 +440,6 @@
               <p style="font-weight: bold;">Python</p>
             </div>
             <h2 class="skillDes"><span class="subhan">기본적인 라이브러리 사용, 크롤링 자동화를 할 수 있음</span></h2>
-          </div>
-
-          <div class="col-md-3 col-sm-6">
-            <div class="skill-item">
-              <!-- <i class="fa fa-globe fa-5x"></i> -->
-              <img src="img/SkillLogo/unity.png" alt="" style="width: 60px; height: 60px;">
-              <p></p>
-              <p style="font-weight: bold;">Unity</p>
-            </div>
-            <h2 class="skillDes"><span class="subhan">2D, 3D, VR, AR 콘텐츠를 제작 / 빌드 가능</span></h2>
           </div>
         </div>
       </div>
@@ -1215,6 +1247,18 @@
       </div>
     </div>
   </div>
+
+  <!-- 깃허브 -->
+  <div class="container-fluid p-0">
+    <div id="githubIcon" class="list-inline list-social-icons mb-0" style="position: fixed; bottom: 5%; right: 3%;" onmousedown="party.confetti(this)">
+      <a href="https://github.com/kkangji99" >
+        <span class="fa-stack fa-lg" >
+          <i class="fa fa-circle fa-stack-2x" ></i>
+          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </div>  
+
   <!-- Global javascript -->
   <script src="js/jquery/jquery.min.js"></script>
   <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
@@ -1222,6 +1266,8 @@
   <script src="js/counter/jquery.waypoints.min.js"></script>
   <script src="js/counter/jquery.counterup.min.js"></script>
   <script src="js/custom.js"></script>
+  <script src="js/custom2.js"></script>
+
   <script>
     $(document).ready(function () {
 
@@ -1273,6 +1319,8 @@
     //   $(img).fadeOut(1000);
     // });
   </script>
+
+
 </body>
 
 </html>
