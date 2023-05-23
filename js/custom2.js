@@ -28,6 +28,24 @@
     period = calcul / (1000*60*60*24*30*12);
     dayTxt = "년";
   }
-
   $("#myPeriod").text(Math.ceil(period)+dayTxt);
+
+
+  //로고 gif 설정
+  $(document).ready(function() {
+    var gifImage = $('#myLogo');
+    var delay = 5000; // 5초의 지연 시간 설정
+    var originalSrc = gifImage.attr('src');
+    var modifiedSrc = 'img/myLogo_gif.gif'; // 수정된 GIF 파일 경로
+
+    function playModifiedGif() {
+      gifImage.attr('src', modifiedSrc); // 수정된 GIF 파일로 변경
+
+      setTimeout(function() {
+        gifImage.attr('src', originalSrc); // 원래 GIF 파일로 변경
+      }, delay);
+    }
+    setInterval(playModifiedGif, delay * 2); // 재생과 지연을 2배로 반복
+  });
+
 })(jQuery); // End of use strict
