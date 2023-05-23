@@ -10,7 +10,6 @@
     $(this).css("right","3%");
   });
 
-
   //이니스트에서 일한기간 설정
   var tody = new Date();
   var year = tody.getFullYear();   // 연도
@@ -47,5 +46,7 @@
     }
     setInterval(playModifiedGif, delay * 2); // 재생과 지연을 2배로 반복
   });
+
+
 
 })(jQuery); // End of use strict

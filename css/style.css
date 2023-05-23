@@ -328,7 +328,8 @@ section.resume-section .resume-item .resume-date {
     margin: 0 auto;
     cursor: pointer;
 
-    border: 5px solid #2196f3;
+    border: 4px solid #2196f3;
+    box-shadow: 5px 5px 5px 5px gray;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption-port {
@@ -853,4 +854,8 @@ section.resume-section .resume-item .resume-date {
     height: 100%;
     width: 100%;
     position: absolute;
+}
+
+.modal-body video{
+    box-shadow: 5px 5px 5px 5px gray;
 }
