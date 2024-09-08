@@ -45,15 +45,16 @@
 
     }
   </style>
-  <style>
-    /* * {
-      cursor: url(img/cat.png), auto !important;
-    } */
-  </style>
   <script>
     function VideoReset(name) {
       name.pause();
       name.currentTime = 0;
+    }
+
+    function fncFileDown(url){
+      alert('준비 중 입니다.'); return false;
+      document.getElementById('fileDownIframe').src = url;
+      document.getElementById('fileDownIframe').location.reload();
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
@@ -164,17 +165,17 @@
           <div class="card mx-0 p-4 mb-5"
             style="border-color: #fd7e14; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21); height: 90%;">
             <div class=" resume-content mr-auto">
-              <h4 class="mb-3"><i class="fa fa-globe mr-3 text-info"></i><span class="han">경력</span></h4>
+              <h4 class="mb-3"><i class="fa fa-globe mr-3 text-info"></i><span class="han">경력</span> <a href="javascript:fncFileDown('');" class="subhan" style="text-decoration-line : none;">(경력기술서 다운로드)</a></h4>
               <div class="subhan">
                 <p>(주)이니스트</p>
                 <p>대학학생역량이력 및 경력관리 시스템, GRC솔루션사업, 소프트웨어 R&D 컨텐츠를 주력으로하는 (주)이니스트에서 <span id="myPeriod"></span>간 근무한 경험이 있습니다.</p>
                 <ul style="margin-left: -2%;">
                   <li>Spring Framework</li>
-                  <li>각종 대학교 학생/교수 역량 지원 프로그램 기능 개발</li>
-                  <li>관리자 프로그램 기능 개발</li>
-                  <!-- <li>유지/보수</li>
-                  <li>리포팅툴 사용</li>
-                  <li>실버서/테스트서버 반영 및 관리</li> -->
+                  <li>대학교 학생/교수 역량 지원 프로그램 기능 개발</li>
+                  <li>CMS 기능 개발</li>
+                  <li>유지/보수</li>
+                  <li>리포팅툴 사용 (UbiReport / OZ)</li>
+                  <li>실버서/테스트서버 반영 및 관리</li>
                 </ul>
               </div>
             </div>
@@ -1249,7 +1250,7 @@
   <!-- 깃허브 -->
   <div class="container-fluid p-0">
     <div id="githubIcon" class="list-inline list-social-icons mb-0" style="position: fixed; bottom: 5%; right: 3%;" onmousedown="party.confetti(this)">
-      <a href="https://github.com/kkangji99" >
+      <a href="https://github.com/kkangji99" target="_blank">
         <span class="fa-stack fa-lg" >
           <i class="fa fa-circle fa-stack-2x" ></i>
           <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -1294,31 +1295,8 @@
       });
 
     });
-
-    // 마우스 클릭
-    // const mouclick = document.documentElement;
-    // mouclick.addEventListener('click', (event) => {
-
-    //   var x = event.pageX;
-    //   var y = event.pageY;
-
-    //   // console.log("("+x+", "+y+")");
-
-    //   var img = document.createElement("img");
-    //   img.setAttribute("src", "img/cat.png")
-
-    //   img.style.position = "absolute";
-    //   img.style.left = x + "px";
-    //   img.style.top = y + "px";
-
-    //   document.body.appendChild(img);
-
-
-    //   $(img).fadeOut(1000);
-    // });
   </script>
 
-
+<iframe id="fileDownIframe" style='visibility:hidden' src="" width="1" height="1"></iframe>
 </body>
-
 </html>
