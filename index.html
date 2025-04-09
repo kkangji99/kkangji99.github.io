@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <link rel="shortcut icon" href="img/cat.png">
   <title>강혜지 포트폴리오</title>
@@ -52,16 +53,35 @@
     }
 
     function fncFileDown(url){
-      alert('준비 중 입니다.'); return false;
-      document.getElementById('fileDownIframe').src = url;
-      document.getElementById('fileDownIframe').location.reload();
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = '';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+    }
+
+    function fncCopy(text){
+      const $input = $('#copytext');
+      $input.val(text);
+      $input.select();
+
+      navigator.clipboard.writeText(text)
+      .then(() => {
+        alert('클립보드에 복사되었습니다!');
+      })
+      .catch(err => {
+        console.error('복사 실패:', err);
+        alert('복사에 실패했습니다. 브라우저를 확인해주세요.');
+      });
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
 </head>
-
 <body id="page-top" style="overflow-x: hidden">
+<input type="hidden" id="copytext">
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none  mx-0 px-0"><img id="myLogo" src="img/myLogo.png" style="width: 150px; height: 38px; " alt="" class="img-fluid"/></span>
@@ -134,18 +154,10 @@
           <!-- <img class="pngs" src="img/school.png"> -->
           <p class="subhan" style="max-width: 500px;">▶ 강혜지 / KangHyeji</p><br>
           <p class="subhan" style="max-width: 500px;">▶ 1999.09.30</p>
-          <br>
-          <p class="subhan" style="max-width: 500px;">▶ 순천대학교 컴퓨터공학과 졸업</p><br>
-          <p class="subhan" style="max-width: 500px;">▶ kkangji7239@gmail.com</p>
-          <br>
-          <p class="subhan" style="max-width: 500px;">▶ 자격증</p>
-          <p class="subhan" style="max-width: 500px;">- 정보처리기사</p>
-          <p class="subhan" style="max-width: 500px;">- SQL 개발자</p>
-          <p class="subhan" style="max-width: 500px;">- 컴퓨터활용능력 2급</p>
-          <p class="subhan" style="max-width: 500px;">- 워드프로세서</p>
-          <p class="subhan" style="max-width: 500px;">- ITQ(엑셀, 파워포인트, 아래 한글 - A등급)</p>
-          <br/>
-          <br/>
+          <p class="subhan" style="max-width: 500px;">▶ 순천대학교 컴퓨터공학과 졸업 [2018.03~ 2022.02]</p><br>
+          <p class="subhan" style="max-width: 500px;">▶ <a href="#" onclick="fncCopy('kkangji7239@gmail.com'); return false;">kkangji7239@gmail.com</a></p>
+          <p class="subhan" style="max-width: 500px;">▶ <a href="#" class="subhan" style="text-decoration-line : none;" onclick="alert('준비 중 입니다.');return false;">경력기술서 다운로드</a></p>
+          <!-- <p class="subhan" style="max-width: 500px;">▶ <a href="#" class="subhan" style="text-decoration-line : none;" onclick="fncFileDown('/file/testPhoto.jpg'); return false;">경력기술서 다운로드</a></p> -->
         </div>
       </div>
     </section>
@@ -161,11 +173,11 @@
         </div>
 
         <div class="resume-item col-sm-12">
-          <!-- 웹프로그래머 경력 -->
+          <!-- 경력 -->
           <div class="card mx-0 p-4 mb-5"
             style="border-color: #fd7e14; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21); height: 90%;">
             <div class=" resume-content mr-auto">
-              <h4 class="mb-3"><i class="fa fa-globe mr-3 text-info"></i><span class="han">경력</span> <a href="javascript:fncFileDown('');" class="subhan" style="text-decoration-line : none;">(경력기술서 다운로드)</a></h4>
+              <h4 class="mb-3"><i class="fa fa-globe mr-3 text-info"></i><span class="han">경력</span></h4>
               <div class="subhan">
                 <p>(주)이니스트</p>
                 <p>대학학생역량이력 및 경력관리 시스템, GRC솔루션사업, 소프트웨어 R&D 컨텐츠를 주력으로하는 (주)이니스트에서 <span id="myPeriod"></span>간 근무한 경험이 있습니다.</p>
@@ -184,6 +196,55 @@
             </div>
           </div>
         </div>
+
+        <div class="resume-item col-sm-12">
+          <!-- 자격증 이력 -->
+          <div class="card mx-0 p-4 mb-5"
+            style="border-color: #fd7e14; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21); height: 90%;">
+            <div class=" resume-content mr-auto">
+              <h4 class="mb-3"><i class="fa fa-globe mr-3 text-info"></i><span class="han">기술자격</span></h4>
+              <div class="subhan">
+                <ul style="margin-left: -2%;">
+                  <li><p>
+                    정보처리기사<br/>
+                    [2022.11.25] 한국산업인력공단
+                  </p></li>
+                  <li><p>
+                    SQL 개발자(SQLD)<br/>
+                    [2022.09.30] 한국데이터산업진흥원
+                  </p></li>
+                  <li><p>
+                    정보기술자격(ITQ) 인터넷 A등급<br/>
+                    [2017.11.02] 한국생산성본부
+                  </p></li>
+                  <li><p>
+                    워드프로세서<br/>
+                    [2017.04.28] 대한상공회의소
+                  </p></li>
+                  <li><p>
+                    컴퓨터활용능력 2급<br/>
+                    [2016.12.09] 대한상공회의소
+                  </p></li>
+                  <li><p>
+                    정보기술자격(ITQ) 한글엑셀 A등급<br/>
+                    [2016.07.28] 한국생산성본부
+                  </p></li>
+                  <li><p>
+                    정보기술자격(ITQ) 한글파워포인트 A등급<br/>
+                    [	2016.07.28] 한국생산성본부
+                  </p></li>
+                  <li><p>
+                    ITQ 아래한글 A<br/>
+                    [2015.07.02] 한국생산성본부
+                  </p></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
 
         <div class="resume-item col-md-6 col-sm-12 ">
           <!-- 인턴 -->
@@ -1247,6 +1308,66 @@
     </div>
   </div>
 
+   <!--====================================================
+                    Resume MODALS
+======================================================-->
+<div class="portfolio-modal modal fade" id="Resume" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="modal-body">
+            <div class="title-bar">
+              <div class="col-md-12">
+                <h2 class="text-center">Our Project</h2>
+                <div class="heading-border"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <img class="img-fluid img-centered" src="img/portfolio/p-9.jpg" alt="">
+              </div>
+              <div class="col-md-6">
+                <p></p>
+                <ul class="list-inline item-details">
+                  <li>Client:
+                    <strong>
+                      <a href="#">Techs Soft</a>
+                    </strong>
+                  </li>
+                  <li>Date:
+                    <strong>
+                      <a href="#">April 2018</a>
+                    </strong>
+                  </li>
+                  <li>Service:
+                    <strong>
+                      <a href="#">Web Development</a>
+                    </strong>
+                  </li>
+                </ul>
+                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                  <i class="fa fa-times"></i> Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
   <!-- 깃허브 -->
   <div class="container-fluid p-0">
     <div id="githubIcon" class="list-inline list-social-icons mb-0" style="position: fixed; bottom: 5%; right: 3%;" onmousedown="party.confetti(this)">
@@ -1296,7 +1417,5 @@
 
     });
   </script>
-
-<iframe id="fileDownIframe" style='visibility:hidden' src="" width="1" height="1"></iframe>
 </body>
 </html>
