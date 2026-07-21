@@ -1,3 +1,15 @@
+:root {
+    --ink: #171a21;
+    --ink-soft: #2c313c;
+    --paper: #ffffff;
+    --bg-alt: #f6f7f9;
+    --line: #e4e7eb;
+    --text: #5b6270;
+    --accent: #2f6fed;
+    --accent-dark: #1d4fc4;
+    --accent-soft: #eaf1ff;
+}
+
 @font-face {
     font-family: 'Cafe24Ssurround';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
@@ -45,9 +57,9 @@
 /*GENERAL STYLE*/
 
 body {
-    font-family: 'Open Sans', serif;
+    font-family: 'Open Sans', 'LINESeedKR-Bd', serif;
     padding-top: 54px;
-    color: #868e96;
+    color: var(--text);
 }
 
 @media (min-width: 992px) {
@@ -63,10 +75,10 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Saira Extra Condensed', serif;
+    font-family: 'Saira Extra Condensed', 'LINESeedKR-Bd', serif;
     font-weight: 700;
     text-transform: uppercase;
-    color: #343a40;
+    color: var(--ink);
 }
 
 h1 {
@@ -79,13 +91,13 @@ h2 {
 }
 
 a {
-    color: #2196f3;
+    color: var(--accent);
 }
 
 a:hover,
 a:focus,
 a:active {
-    color: #0f72c1;
+    color: var(--accent-dark);
 }
 
 .subheading {
@@ -103,7 +115,7 @@ a:active {
 }
 
 .list-social-icons a:hover {
-    color: #2196f3;
+    color: var(--accent);
 }
 
 .list-social-icons a .fa-lg {
@@ -115,15 +127,24 @@ a:active {
 }
 
 .list-icons .list-inline-item i:hover {
-    color: #2196f3;
+    color: var(--accent);
 }
 
 /*==================================================
                     NAV-BAR
 ====================================================*/
 #sideNav .navbar-nav .nav-item .nav-link {
+    font-family: 'Saira Extra Condensed', serif;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+.nav-wordmark {
+    font-family: 'Saira Extra Condensed', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #fff;
 }
 
 @media (min-width: 992px) {
@@ -186,34 +207,37 @@ a:active {
     background-color: transparent;
     text-align: center;
     border-width: 1px;
-    border-radius: 0px;
-    font-size: 16px;
-    padding: 10px 15px;
-    font-weight: 400;
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 10px 18px;
+    font-weight: 600;
     text-transform: uppercase;
+    letter-spacing: .03em;
 }
 
 .btn-white {
-    border-color: #2196f3;
-    background-color: #2196f3;
+    border-color: var(--accent);
+    background-color: var(--accent);
     color: #fff;
 }
 
 .btn-white:hover,
 .btn-white:focus {
     background-color: transparent;
-    color: #2196f3;
+    color: var(--accent);
     cursor: pointer;
 }
 
 .btn-green {
-    border-color: #2196f3;
-    color: #2196f3;
+    border-color: var(--line);
+    color: var(--text);
 }
 
 .btn-green:hover,
-.btn-green:focus {
-    background-color: #2196f3;
+.btn-green:focus,
+.btn-green.active {
+    background-color: var(--accent);
+    border-color: var(--accent);
     color: #fff;
     cursor: pointer;
 }
@@ -222,14 +246,15 @@ a:active {
                   SECTION (Generic)
 ====================================================*/
 .heading-border {
-    width: 60px;
-    height: 10px;
-    background-color: #2196f3;
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent);
     margin: 0 auto 20px auto;
 }
 
 section.resume-section {
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid var(--line);
     padding-top: 5rem !important;
     padding-bottom: 5rem !important;
 }
@@ -256,35 +281,83 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-    background-color: #2196f3 !important;
+    background-color: var(--ink) !important;
 }
 
 .text-primary {
-    color: #2196f3 !important;
+    color: var(--accent) !important;
 }
 
 /*==================================================
                       ABOUT
 ====================================================*/
 #about {
-    background-image: url(../img/blue_white_banner.png);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-
-
-
+    background: linear-gradient(135deg, var(--ink) 0%, var(--ink-soft) 55%, var(--accent-dark) 100%);
 }
 
+#about .han span:not(.text-primary),
 #about h1 {
-    /*font-size: 100%;*/
+    color: #fff;
+}
+
+#about .subhan,
+#about .subhan a {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+#about .subhan a:hover {
+    color: #fff;
+}
+
+#about .text-primary {
+    color: #8fb3ff !important;
+}
+
+#about .hero-meta {
+    margin-top: 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#about .hero-chip {
+    display: inline-block;
+    padding: 7px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+}
+
+#about .hero-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#about .hero-actions .btn-general {
+    display: inline-block;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.06);
+    text-transform: none;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#about .hero-actions .btn-general:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
 }
 
 /*==================================================
                     EXPERIENCE
 ====================================================*/
 #experience {
-    background: #f5f5f5;
+    background: var(--bg-alt);
 }
 
 #experience .card h4 {
@@ -293,10 +366,15 @@ section.resume-section .resume-item .resume-date {
     color: #555;
 }
 .card.mx-0.p-4.mb-5{
-    transition: all 0.2s linear;
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--accent);
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(16, 24, 40, 0.06) !important;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .card.mx-0.p-4.mb-5:hover{
-    transform: scale(1.05);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(16, 24, 40, 0.1) !important;
 }
 
 /*====================================================
@@ -328,8 +406,17 @@ section.resume-section .resume-item .resume-date {
     margin: 0 auto;
     cursor: pointer;
 
-    border: 4px solid #2196f3;
-    box-shadow: 5px 5px 5px 5px gray;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(16, 24, 40, 0.08);
+    filter: grayscale(0.35);
+    transition: filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+#portfolio .portfolio-item .portfolio-link:hover {
+    filter: grayscale(0);
+    box-shadow: 0 8px 20px rgba(16, 24, 40, 0.12);
 }
 
 #portfolio .portfolio-item .portfolio-link .caption-port {
@@ -340,7 +427,7 @@ section.resume-section .resume-item .resume-date {
     -moz-transition: all ease 0.5s;
     transition: all ease 0.5s;
     opacity: 0;
-    background: rgba(54, 160, 245, 0.73);
+    background: rgba(23, 26, 33, 0.8);
 }
 
 #portfolio .portfolio-item .portfolio-link .caption-port:hover {
@@ -472,48 +559,60 @@ section.resume-section .resume-item .resume-date {
 ======================================================*/
 
 #skills {
-    background-image: url("../img/bg-stats.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background: linear-gradient(160deg, var(--ink) 0%, var(--ink-soft) 100%);
 }
 
 .skill-cover {
-    background-color: rgba(31, 31, 31, 0.68);
+    background-color: transparent;
 }
 
 .skill-cover h3 {
     font-family: "hind", sans-serif;
     font-size: 35px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
-.skill-item {
-    padding: 20px 0;
-    margin-bottom: 30px;
-    /* background: rgba(144, 144, 144, 0.78); */
-    background: rgba(144, 144, 144, 0.78);
+.skill-card {
+    height: 100%;
+    padding: 28px 18px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 3px solid var(--accent);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.15s ease, background 0.15s ease;
 }
 
-.skill-item i {
-    color: #2196f3;
+.skill-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.1);
 }
 
-.skill-item h2 {
+.skill-card .skill-logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    margin-bottom: 14px;
+}
+
+.skill-card .skill-logo-icon {
+    display: block;
+    font-size: 2.4rem;
     color: #fff;
-    font-size: "hind", sans-serif;
-    font-size: 35px;
+    margin-bottom: 14px;
+}
+
+.skill-card .skill-name {
+    color: #fff;
     font-weight: 700;
-    margin-top: 15px;
-    margin-bottom: 1px;
+    margin-bottom: 8px;
 }
 
-.skill-item p {
-    color: #fff;
-    font-family: "hind", sans-serif;
-    /*text-transform: uppercase;*/
-    font-weight: 300;
-    margin-top: 0;
+.skill-card .skill-desc {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 0;
 }
 
 /*====================================================
@@ -521,224 +620,56 @@ section.resume-section .resume-item .resume-date {
 ======================================================*/
 
 #awards {
-    background: #f0f0f0;
+    background: var(--bg-alt);
 }
 
-#award-box {
-    overflow: hidden;
-    position: relative;
-    padding: 60px 0;
+.award-card {
+    display: flex;
+    flex-direction: column;
 }
 
-#award-box:before {
-    content: "";
-    width: 1px;
-    height: 100%;
-    background: #cfcdcd;
-    position: absolute;
-    top: 0;
-    left: 50%;
-}
-
-#award-box .award {
-    width: 50%;
-    clear: both;
-    position: relative;
-}
-
-#award-box .award:before,
-#award-box .award:after {
-    content: "";
+.award-card .award-date {
     display: block;
-    clear: both;
+    font-weight: 700;
+    margin-bottom: 6px;
 }
 
-#award-box .award:first-child:before,
-#award-box .award:last-child:before {
-    content: "";
-    width: 11px;
-    height: 11px;
-    background: #cfcdcd;
-    box-sizing: content-box;
-    border: 5px solid #fff;
-    box-shadow: 0 0 0 2px #cfcdcd;
-    position: absolute;
-    top: -54px;
-    right: -11px;
-    transform: rotate(45deg);
+.award-card .han {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
 }
 
-#award-box .award:last-child:before {
-    top: auto;
-    bottom: -54px;
+.award-card .subhan {
+    font-size: 0.95rem;
+    color: var(--text);
+    flex-grow: 1;
 }
 
-#award-box .award:last-child:nth-child(even):before {
-    right: auto;
-    left: -11px;
-}
-
-#award-box .award-icon {
-    width: 24px;
-    height: 24px;
-    background: #fff;
-    border: 1px solid #cfcdcd;
-    position: absolute;
-    top: 17px;
-    right: -13px;
-    z-index: 1;
-    transform: rotate(45deg);
-}
-
-#award-box .award-icon:before {
-    content: "";
-    display: block;
-    width: 15px;
-    height: 15px;
-    background: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: background-color 0.2s ease 0s;
-}
-
-#award-box .award:hover .award-icon:before {
-    background: #39b3ff;
-}
-
-#award-box .award-content {
-    width: 85%;
-    padding: 18px 30px;
-    background: #fff;
-    text-align: left;
-    float: left;
-    border: 1px solid transparent;
-    position: relative;
-    transition: all 0.3s ease 0s;
-}
-
-#award-box .award:hover .award-content {
-    border: 1px solid #cfcdcd;
-}
-
-#award-box .award-content:before {
-    content: "";
-    display: block;
-    width: 14px;
-    height: 14px;
-    background: #fff;
-    border: 1px solid #cfcdcd;
-    position: absolute;
-    top: 21px;
-    right: -7.3px;
-    transform: rotate(45deg);
-    transition: all 0.2s ease 0s;
-}
-
-#award-box .award:hover .award-content:before {
-    background: #39b3ff;
-    border-color: #39b3ff;
-}
-
-#award-box .award-content:after {
-    content: "";
-    width: 11%;
-    height: 1px;
-    background: #cfcdcd;
-    position: absolute;
-    top: 28px;
-    right: -14%;
-}
-
-#award-box .date {
-    display: block;
-    font-size: 15px;
+.award-card .award-link {
+    margin-top: 12px;
     font-weight: 600;
-    color: #39b3ff;
-    margin: 0 0 8px;
-    transition: all 0.3s ease 0s;
+    text-decoration: none;
 }
 
-#award-box .award:hover .date {
-    color: #444;
+.award-card .award-link:hover {
+    text-decoration: underline;
 }
 
-#award-box .title {
-    font-size: 18px;
-    color: #444;
-    margin-top: 0;
-    transition: all 0.3s ease 0s;
+.award-modal-body {
+    padding: 60px 20px;
 }
 
-#award-box .award:hover .title {
-    color: #39b3ff;
+.award-modal-body h3 {
+    margin-bottom: 30px;
 }
 
-#award-box .description {
-    font-size: 16px;
-    color: #777;
-    line-height: 28px;
-    margin-top: 8px;
-}
-
-#award-box .award:nth-child(2n),
-#award-box .award:nth-child(2n) .award-content {
-    float: right;
-    text-align: left;
-}
-
-#award-box .award:nth-child(2n) .award-icon {
-    right: 0;
-    left: -12px;
-}
-
-#award-box .award:nth-child(2n) .award-content:before {
-    left: -7.3px;
-}
-
-#award-box .award:nth-child(2n) .award-content:after {
-    left: -14%;
-}
-
-@media only screen and (max-width: 767px) {
-    #award-box {
-        padding-left: 20px;
-    }
-
-    #award-box:before {
-        left: 20px;
-    }
-
-    #award-box .award {
-        width: 100%;
-    }
-
-    #award-box .award,
-    #award-box .award-content {
-        float: right;
-        padding: 5px;
-        text-align: left;
-    }
-
-    #award-box .award:first-child:before,
-    #award-box .award:last-child:nth-child(odd):before {
-        right: auto;
-        left: -11px;
-    }
-
-    #award-box .award-icon {
-        right: 0;
-        left: -12px;
-    }
-
-    #award-box .award-content:before {
-        left: -7.3px;
-    }
-
-    #award-box .award-content:after {
-        left: -14%;
-    }
+.award-modal-img {
+    max-width: 480px;
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(16, 24, 40, 0.18);
+    margin: 0 auto 30px auto;
+    display: block;
 }
 
 /*====================================================

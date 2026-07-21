@@ -22,30 +22,6 @@
   <link href="css/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="css/slide.css">
-  <style>
-    .col-md-3:hover .skillDes {
-      opacity: 1;
-    }
-
-    .skillDes {
-      /* 지금 얘때문에 스크롤 생김 */
-      vertical-align: middle;
-      text-align: center;
-      padding: 0px 20px 20px 20px;
-      background-color: #444444;
-      border-radius: 5px;
-      color: #ffffff;
-      position: absolute;
-      top: 110%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: max-content;
-      opacity: 0;
-      transition: all ease 0.3s;
-      z-index: 1;
-
-    }
-  </style>
   <script>
     function VideoReset(name) {
       name.pause();
@@ -84,7 +60,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none  mx-0 px-0"><img id="myLogo" src="img/myLogo.png" style="width: 150px; height: 38px; " alt="" class="img-fluid"/></span>
+      <span class="d-block d-lg-none mx-0 px-0 nav-wordmark">KKANGJI</span>
       <span class="d-none d-lg-block">
         <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="" id="myimg">
       </span>
@@ -99,13 +75,16 @@
           <a class="nav-link js-scroll-trigger" href="#about">About</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+          <a class="nav-link js-scroll-trigger" href="#portfolio">Etc</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
@@ -127,12 +106,6 @@
       </audio> -->
 
       <div class="my-auto">
-        <!-- <img src="img/logo-s.png" class="img-fluid mb-3" alt=""> -->
-        <!-- 젤 큰 목록 -->
-        <!-- <h1 class="han" style="font-size: 500%;">강혜지
-          <span class="han"> profile</span>
-        </h1> -->
-        <!-- 큰 설명 -->
         <div class="han">
           <div style="font-size: 200%;">
             <span class="text-primary">목표지향적</span>
@@ -146,18 +119,184 @@
           <span> 등</span>
           <span class="text-primary">백엔드</span>
           <span>를 공부하고 있습니다.</span>
-
-          <a href="#"></a>
         </div>
-        <!-- 하단 작은 설명 -->
-        <div style="margin-bottom: -25%;">
-          <!-- <img class="pngs" src="img/school.png"> -->
-          <p class="subhan" style="max-width: 500px;">▶ 강혜지 / KangHyeji</p><br>
-          <p class="subhan" style="max-width: 500px;">▶ 1999.09.30</p>
-          <p class="subhan" style="max-width: 500px;">▶ 순천대학교 컴퓨터공학과 졸업 [2018.03~ 2022.02]</p><br>
-          <p class="subhan" style="max-width: 500px;">▶ <a href="#" onclick="fncCopy('kkangji7239@gmail.com'); return false;">kkangji7239@gmail.com</a></p>
-          <p class="subhan" style="max-width: 500px;">▶ <a href="#" class="subhan" style="text-decoration-line : none;" onclick="alert('준비 중 입니다.');return false;">경력기술서 다운로드</a></p>
-          <!-- <p class="subhan" style="max-width: 500px;">▶ <a href="#" class="subhan" style="text-decoration-line : none;" onclick="fncFileDown('/file/testPhoto.jpg'); return false;">경력기술서 다운로드</a></p> -->
+
+        <div class="hero-meta">
+          <span class="hero-chip"><i class="fa fa-graduation-cap mr-2"></i>순천대학교 컴퓨터공학과 졸업 [2018.03 ~ 2022.02]</span>
+          <span class="hero-chip"><i class="fa fa-briefcase mr-2"></i>(주)이니스트소프트 재직 중 [2023.01 ~ ]</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#" class="btn-general" onclick="fncCopy('kkangji7239@gmail.com'); return false;"><i class="fa fa-envelope-o mr-2"></i>kkangji7239@gmail.com</a>
+          <a href="#" class="btn-general" onclick="alert('준비 중 입니다.');return false;"><i class="fa fa-download mr-2"></i>경력기술서 다운로드</a>
+          <a href="https://github.com/kkangji99" target="_blank" class="btn-general"><i class="fa fa-github mr-2"></i>GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!--====================================================
+                        SKILLS
+    ======================================================-->
+    <section class=" d-flex flex-column" id="skills">
+      <div class="p-lg-5 p-3 skill-cover">
+        <h3 class="text-center text-white">Skills</h3>
+        <p class="text-center subhan" style="color: #dcdcdc;">숙련도보다 "어디에, 왜 썼는지"를 기준으로 정리했습니다.</p>
+
+        <h5 class="text-center text-white mt-4 mb-3">Backend & DB</h5>
+        <div class="row my-auto ">
+
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="skill-card">
+              <img src="img/SkillLogo/java .png" alt="" class="skill-logo">
+              <p class="skill-name">Java</p>
+              <p class="skill-desc">대학 시스템 백엔드 로직 구현 (Servlet 기반 요청 처리, 비즈니스 로직)</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="skill-card">
+              <img src="img/SkillLogo/spring.png" alt="" class="skill-logo">
+              <p class="skill-name">Spring / JSP / MyBatis</p>
+              <p class="skill-desc">학교(고객)별 커스터마이징이 잦아 설정 기반으로 화면·기능을 확장하기 위해 사용</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="skill-card">
+              <img src="img/SkillLogo/sql.png" alt="" class="skill-logo">
+              <p class="skill-name">SQL (MySQL / Oracle)</p>
+              <p class="skill-desc">학교마다 사용 DB가 달라 양쪽 환경에서 테이블 설계·인덱스 조회·쿼리 튜닝 수행</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="skill-card">
+              <i class="fa fa-file-text-o skill-logo-icon"></i>
+              <p class="skill-name">UbiReport / OZ</p>
+              <p class="skill-desc">통계·증명서 등 리포팅 요구사항을 처리하기 위한 리포팅툴</p>
+            </div>
+          </div>
+        </div>
+
+        <h5 class="text-center text-white mt-4 mb-3">기타 (자동화 · 학습용)</h5>
+        <div class="row my-auto ">
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="skill-card">
+              <img src="img/SkillLogo/python.png" alt="" class="skill-logo">
+              <p class="skill-name">Python</p>
+              <p class="skill-desc">데이터 크롤링 및 전처리 자동화 스크립트 작성에 사용</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="skill-card">
+              <img src="img/SkillLogo/unity.png" alt="" class="skill-logo">
+              <p class="skill-name">Unity / C#</p>
+              <p class="skill-desc">학부·교육과정 중 VR/AR 프로젝트에서 사용 (자세한 내용은 하단 '기타 프로젝트' 참고)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--====================================================
+                        PROJECTS
+    ======================================================-->
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
+      <div class="row my-auto">
+        <div class="col-12">
+          <h2 class="text-center">Projects</h2>
+          <div class="mb-5 heading-border"></div>
+        </div>
+
+        <div class="col-12 mb-5">
+          <div class="row text-center">
+            <div class="col-md-3 col-sm-6 mb-3">
+              <h3 class="text-primary mb-0">90%+</h3>
+              <p class="subhan">현장실습 프로그램 사용자·관리자 긍정 피드백</p>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+              <h3 class="text-primary mb-0">75%↓</h3>
+              <p class="subhan">장학금 승인 건당 평균 검토 시간 절감</p>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+              <h3 class="text-primary mb-0">2배↑</h3>
+              <p class="subhan">도입 1학기 내 장학금 신청 건수 증가</p>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+              <h3 class="text-primary mb-0">0건</h3>
+              <p class="subhan">접근제어 고도화 이후 보안 이슈 발생</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-item col-12">
+          <div class="card mx-0 p-4 mb-5" style="">
+            <div class="resume-content mr-auto">
+              <h4 class="mb-3 d-flex flex-wrap justify-content-between align-items-start">
+                <span><i class="fa fa-university mr-3 text-info"></i><span class="han">지능형 교육플랫폼 2차 고도화 (대전대학교)</span></span>
+                <span class="text-primary">2024</span>
+              </h4>
+              <div class="subhan">
+                <p><b>개요</b> · (주)이니스트소프트 R&D그룹, 팀 프로젝트, 담당: 기능 개발 및 데이터 이관 · 실습 이력 관리 효율성을 높이기 위한 현장실습 프로그램 신규 개발</p>
+                <p><b>기술 스택</b> · Spring, JSP, MyBatis, Oracle — 학교 요구사항에 맞춘 설정 기반 확장 / Python — 이관 스크립트 작성용</p>
+                <p><b>트러블슈팅 (STAR)</b></p>
+                <ul style="margin-left: -2%;">
+                  <li><b>상황</b>: 기존 실습 이력 데이터가 여러 시스템에 분산되어 있어 조회·관리가 비효율적이었음</li>
+                  <li><b>문제</b>: 분산된 데이터를 신규 시스템으로 일괄 이관해야 하는데, 수기 이관 시 누락·오류 발생 우려</li>
+                  <li><b>시도</b>: 이력 데이터 포맷을 표준화하고, 자동화 스크립트로 일괄 이관하여 이관 오류를 최소화</li>
+                  <li><b>결과</b>: 관리자·사용자 대상 인터뷰에서 <span class="text-primary">90% 이상 긍정적 피드백</span> 확보</li>
+                </ul>
+                <p style="color: #999;">※ 사내 SI 프로젝트로 소스코드 및 데모는 비공개입니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-item col-12">
+          <div class="card mx-0 p-4 mb-5" style="">
+            <div class="resume-content mr-auto">
+              <h4 class="mb-3 d-flex flex-wrap justify-content-between align-items-start">
+                <span><i class="fa fa-money mr-3 text-info"></i><span class="han">학생역량통합관리시스템 구축 (마일리지 기반 장학금)</span></span>
+                <span class="text-primary">2024</span>
+              </h4>
+              <div class="subhan">
+                <p><b>개요</b> · (주)이니스트소프트 R&D그룹, 팀 프로젝트, 담당: 승인 프로세스 자동화 기능 개발 · 마일리지 기반 장학금 신청·승인 시스템 개발</p>
+                <p><b>기술 스택</b> · Spring, JSP, MyBatis, MySQL</p>
+                <p><b>트러블슈팅 (STAR)</b></p>
+                <ul style="margin-left: -2%;">
+                  <li><b>상황</b>: 장학금 신청 건을 관리자가 수기로 검토·승인하여 처리 시간이 오래 걸리고 병목이 발생</li>
+                  <li><b>문제</b>: 신청 건수가 늘어날수록 검토 지연이 누적되어 학생 만족도 저하 우려</li>
+                  <li><b>시도</b>: 마일리지 기준에 따른 승인 프로세스를 자동화하여 관리자 개입을 최소화</li>
+                  <li><b>결과</b>: 건당 평균 검토 시간 <span class="text-primary">약 75% 절감</span>, 도입 1학기 내 신청 건수 <span class="text-primary">2배 증가</span></li>
+                </ul>
+                <p style="color: #999;">※ 사내 SI 프로젝트로 소스코드 및 데모는 비공개입니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-item col-12">
+          <div class="card mx-0 p-4 mb-5" style="">
+            <div class="resume-content mr-auto">
+              <h4 class="mb-3 d-flex flex-wrap justify-content-between align-items-start">
+                <span><i class="fa fa-lock mr-3 text-info"></i><span class="han">명지역량 통합 관리 시스템 기능 고도화 (명지대학교)</span></span>
+                <span class="text-primary">2024</span>
+              </h4>
+              <div class="subhan">
+                <p><b>개요</b> · (주)이니스트소프트 R&D그룹, 팀 프로젝트, 담당: 보안 기능 설계 및 구현 · 시스템 보안 강화를 위한 접근 제어 기능 개발</p>
+                <p><b>기술 스택</b> · Spring, JSP, MyBatis, Oracle</p>
+                <p><b>트러블슈팅 (STAR)</b></p>
+                <ul style="margin-left: -2%;">
+                  <li><b>상황</b>: 외부에서 관리자 페이지 등 주요 기능에 대한 접근 통제가 부족한 상태였음</li>
+                  <li><b>문제</b>: 지정되지 않은 IP에서도 접근이 가능해 보안 이슈 발생 가능성 존재</li>
+                  <li><b>시도</b>: IP 기반 접근 제어 기능을 구현하고, 사용자 권한별 화이트리스트 적용 및 접근 로그 기록을 자동화</li>
+                  <li><b>결과</b>: 도입 이후 <span class="text-primary">보안 이슈 제로화</span>, 시스템 안정성 확보에 기여</li>
+                </ul>
+                <p style="color: #999;">※ 사내 SI 프로젝트로 소스코드 및 데모는 비공개입니다.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -174,33 +313,29 @@
 
         <div class="resume-item col-sm-12">
           <!-- 경력 -->
-          <div class="card mx-0 p-4 mb-5"
-            style="border-color: #fd7e14; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21); height: 90%;">
+          <div class="card mx-0 p-4 mb-5">
             <div class=" resume-content mr-auto">
-              <h4 class="mb-3"><i class="fa fa-globe mr-3 text-info"></i><span class="han">경력</span></h4>
+              <h4 class="mb-3 d-flex flex-wrap justify-content-between align-items-start">
+                <span><i class="fa fa-globe mr-3 text-info"></i><span class="han">경력</span></span>
+                <span class="text-primary">2023.01 ~ ing</span>
+              </h4>
               <div class="subhan">
-                <p>(주)이니스트</p>
-                <p>대학학생역량이력 및 경력관리 시스템, GRC솔루션사업, 소프트웨어 R&D 컨텐츠를 주력으로하는 (주)이니스트에서 <span id="myPeriod"></span>간 근무한 경험이 있습니다.</p>
+                <p>(주)이니스트소프트</p>
+                <p>대학 학생역량이력 및 경력관리 시스템, GRC솔루션사업, 소프트웨어 R&D 컨텐츠를 주력으로 하는 (주)이니스트소프트 R&D그룹 개발팀에서 <span id="myPeriod"></span>간 근무하며, 관리자(직원)·학생·교수·기업 대상 대학 시스템의 개발 및 유지보수를 담당하고 있습니다.</p>
                 <ul style="margin-left: -2%;">
-                  <li>Spring Framework</li>
-                  <li>대학교 학생/교수 역량 지원 프로그램 기능 개발</li>
-                  <li>CMS 기능 개발</li>
-                  <li>유지/보수</li>
-                  <li>리포팅툴 사용 (UbiReport / OZ)</li>
-                  <li>실버서/테스트서버 반영 및 관리</li>
+                  <li>Spring Framework / JSP / MyBatis — 학교(고객)별 커스터마이징이 잦은 대학 시스템 특성상, 설정 기반으로 화면·기능을 확장하기 쉬워 사용</li>
+                  <li>MySQL / Oracle — 학교마다 사용 DB가 달라 양쪽 환경 모두 대응</li>
+                  <li>UbiReport / OZ — 통계·증명서 등 리포팅 요구사항 처리</li>
+                  <li>비교과·상담·현장실습 모듈 개발, 버그리포트 대응, 실서버/테스트서버 반영 및 관리</li>
                 </ul>
               </div>
-            </div>
-            <div class="resume-date text-md-right" style="position: absolute;top: 90%;  bottom: 5%; right: 2%;">
-              <span class="text-primary">2023.01 ~ ing</span>
             </div>
           </div>
         </div>
 
         <div class="resume-item col-sm-12">
           <!-- 자격증 이력 -->
-          <div class="card mx-0 p-4 mb-5"
-            style="border-color: #fd7e14; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21); height: 90%;">
+          <div class="card mx-0 p-4 mb-5">
             <div class=" resume-content mr-auto">
               <h4 class="mb-3"><i class="fa fa-globe mr-3 text-info"></i><span class="han">기술자격</span></h4>
               <div class="subhan">
@@ -248,10 +383,12 @@
 
         <div class="resume-item col-md-6 col-sm-12 ">
           <!-- 인턴 -->
-          <div class="card mx-0 p-4 mb-5"
-            style="border-color: #17a2b8; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21); height: 90%;">
+          <div class="card mx-0 p-4 mb-5 h-100">
             <div class=" resume-content mr-auto">
-              <h4 class="mb-3"><i class="fa fa-globe mr-3 text-info"></i><span class="han">인턴</span></h4>
+              <h4 class="mb-3 d-flex flex-wrap justify-content-between align-items-start">
+                <span><i class="fa fa-globe mr-3 text-info"></i><span class="han">인턴</span></span>
+                <span class="text-primary">2021.08 ~ 2021.12</span>
+              </h4>
               <div class="subhan">
                 <p>(주)브이알크루</p>
                 <p> AR / VR 컨텐츠 개발 업무가 주를 이루는 (주)브이알크루에서 인턴으로 근무한 경험이 있습니다.</p>
@@ -263,19 +400,17 @@
                 </ul>
               </div>
             </div>
-            <div class="resume-date text-md-right" style="position: absolute;top: 90%;  bottom: 5%; right: 2%;">
-              <span class="text-primary">2021.08 ~ 2021.12</span>
-            </div>
           </div>
 
           <!-- 교육 -->
         </div>
         <div class="resume-item col-md-6 col-sm-12">
-          <div class="card mx-0 p-4 mb-5"
-            style="border-color: #ffc107; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21); height: 90%;">
+          <div class="card mx-0 p-4 mb-5 h-100">
             <div class="resume-content mr-auto">
-              <h4 class="mb-3"><i class="fa fa-area-chart mr-3 text-primary"></i><span class="han">빅데이터 분석서비스
-                  개발자과정(NCS)</span></h4>
+              <h4 class="mb-3 d-flex flex-wrap justify-content-between align-items-start">
+                <span><i class="fa fa-area-chart mr-3 text-primary"></i><span class="han">빅데이터 분석서비스 개발자과정(NCS)</span></span>
+                <span class="text-primary">2022.06 ~ 2022.12</span>
+              </h4>
               <div class="subhan">
                 <p>스마트인재개발원</p>
                 <p>DCX기반 교육에서
@@ -290,18 +425,15 @@
                 </ul>
               </div>
             </div>
-            <div class="resume-date text-md-right" style="position: absolute; top: 90%; bottom: 5%; right: 2%;">
-              <span class="text-primary">2022.06 ~ 2022.12</span>
-            </div>
           </div>
         </div>
         <div class="resume-item col-md-6 col-sm-12">
-          <div class="card mx-0 p-4 mb-5"
-            style="border-color: #28a745; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21); height: 90%;">
+          <div class="card mx-0 p-4 mb-5 h-100">
             <div class="resume-content mr-auto">
-              <h4 class="mb-3"><i class="fa fa-laptop mr-3 text-warning"></i><span class="han">VR / AR 게임콘텐츠 인재양성
-                  교육과정
-                </span></h4>
+              <h4 class="mb-3 d-flex flex-wrap justify-content-between align-items-start">
+                <span><i class="fa fa-laptop mr-3 text-warning"></i><span class="han">VR / AR 게임콘텐츠 인재양성 교육과정</span></span>
+                <span class="text-primary">2021.07 ~ 2021.08</span>
+              </h4>
               <div class="subhan">
                 <p>순천대학교 산업협력교육센터</p>
                 <p>Unreal Engine으로 PC 전투 게임을 개발하여 빌드한 경험이 있습니다.</p>
@@ -312,17 +444,15 @@
                 </ul>
               </div>
             </div>
-            <div class="resume-date text-md-right" style="position: absolute; top: 90%; bottom: 5%; right: 2%;">
-              <span class="text-primary">2021.07 ~ 2021.08</span>
-            </div>
           </div>
         </div>
         <div class="resume-item col-md-6 col-sm-12">
-          <div class="card mx-0 p-4 mb-5"
-            style="border-color: #2196f3; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21); height: 90%;">
+          <div class="card mx-0 p-4 mb-5 h-100">
             <div class="resume-content mr-auto">
-              <h4 class="mb-3"><i class="fa fa-laptop mr-3 text-warning"></i><span class="han">VR / AR 산업분야 인재양성
-                  교육과정</span></h4>
+              <h4 class="mb-3 d-flex flex-wrap justify-content-between align-items-start">
+                <span><i class="fa fa-laptop mr-3 text-warning"></i><span class="han">VR / AR 산업분야 인재양성 교육과정</span></span>
+                <span class="text-primary">2020.9 ~ 2021.1</span>
+              </h4>
               <div class="subhan">
                 <p>순천대학교 산업협력교육센터</p>
                 <p>VR 게임을 개발하여 빌드한 경험이 있습니다.</p>
@@ -334,13 +464,10 @@
                 </ul>
               </div>
             </div>
-            <div class="resume-date text-md-right" style="position: absolute;top: 90%;  bottom: 5%; right: 2%;">
-              <span class="text-primary">2020.9 ~ 2021.1</span>
-            </div>
           </div>
         </div>
         <!-- <div class="resume-item col-md-6 col-sm-12">
-          <div class="card mx-0 p-4 mb-5" style="border-color: #ffc107; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21); " >
+          <div class="card mx-0 p-4 mb-5" style="" >
             <div class="resume-content mr-auto">
               <h4 class="mb-3"><i class="fa fa-camera mr-3 text-success"></i><span class="han">스마일게이트 스토브 게임잼</span>
               </h4>
@@ -363,7 +490,7 @@
           </div>
         </div>
         <div class="resume-item col-md-6 col-sm-12">
-          <div class="card mx-0 p-4 mb-5" style="border-color: #28a745; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21);">
+          <div class="card mx-0 p-4 mb-5" style="">
             <div class="resume-content mr-auto">
               <h4 class="mb-3"><i class="fa fa-laptop mr-3 text-warning"></i><span class="han" >-
                 </span></h4>
@@ -389,8 +516,9 @@
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="portfolio">
       <div class="row my-auto">
         <div class="col-12">
-          <h2 class="  text-center">Portfolio</h2>
+          <h2 class="  text-center">기타 프로젝트</h2>
           <div class="mb-5 heading-border"></div>
+          <p class="text-center subhan">실무 프로젝트는 위 <a href="#projects">Projects</a> 섹션을 참고해 주세요. 아래는 학부·교육과정 중 진행한 개인·팀 프로젝트입니다.</p>
         </div>
         <div class="col-md-12">
           <div class="port-head-cont">
@@ -454,58 +582,6 @@
     </section>
 
     <!--====================================================
-                        SKILLS
-    ======================================================-->
-    <section class=" d-flex flex-column" id="skills">
-      <div class="p-lg-5 p-3 skill-cover">
-        <h3 class="text-center text-white">Coding Skills</h3>
-        <div class="row text-center my-auto ">
-
-          <div class="col-md-3 col-sm-6">
-            <div class="skill-item">
-              <!-- <i class="fa fa-globe fa-5x"></i> -->
-              <img src="img/SkillLogo/spring.png" alt="" style="width: 60px; height: 60px;">
-              <p></p>
-              <p style="font-weight: bold;">Spring / JSP</p>
-            </div>
-            <h2 class="skillDes"><span class="subhan">스프링 프레임워크를 활용한 간단한 프로젝트 제작 가능</span></h2>
-          </div>
-
-          <div class="col-md-3 col-sm-6" style="position: relative;">
-            <div class="skill-item">
-              <!-- <i class="fa fa-html5 fa-5x"></i> -->
-              <img src="img/SkillLogo/java .png" alt="" style="width: 60px; height: 60px;">
-              <p></p>
-              <p style="font-weight: bold;">Java</p>
-            </div>
-            <h2 class="skillDes"><span class="subhan">기본적인 라이브러리 사용 가능</span></h2>
-          </div>
-
-          <div class="col-md-3 col-sm-6">
-            <div class="skill-item">
-              <!-- <i class="fa fa-css3 fa-5x"></i> -->
-              <img src="img/SkillLogo/sql.png" alt="" style="width: 60px; height: 60px;">
-              <p></p>
-              <!-- <h2><span class="counter"> 95 </span><span>%</span></h2> -->
-              <p style="font-weight: bold;">SQL</p>
-            </div>
-            <h2 class="skillDes"><span class="subhan">MySQL/Oracle을 사용해 DB를 구축, 인덱스를 활용한 조회 가능</span></h2>
-          </div>
-
-          <div class="col-md-3 col-sm-6">
-            <div class="skill-item">
-              <!-- <i class="fa fa-code fa-5x"></i> -->
-              <img src="img/SkillLogo/python.png" alt="" style="width: 60px; height: 60px;">
-              <p></p>
-              <p style="font-weight: bold;">Python</p>
-            </div>
-            <h2 class="skillDes"><span class="subhan">기본적인 라이브러리 사용, 크롤링 자동화를 할 수 있음</span></h2>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--====================================================
                            AWARDS
     ======================================================-->
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
@@ -514,86 +590,55 @@
           <h2 class="  text-center">Awards</h2>
           <div class="mb-5 heading-border"></div>
         </div>
-        <div class="main-award" id="award-box" style="margin:auto; display:block;">
+        <div class="col-12">
+          <div class="row">
 
-          <div class="award">
-            <div class="award-icon"></div>
-            <div class="award-content">
-              <span class="date">2022.12.14</span>
-              <h5 class="han">실전융합프로젝트 최우수상</h5>
-              <p class="subhan">
-                K-디지털 핵심실무인재양성사업 <br />
-                DCX기반 빅데이터 분석서비스 <br />
-                개발자과정 실전융합프로젝트 <br /> 최우수상
-              </p>
-              <a href="#smartSaveTheAnimal" data-toggle="modal" class="subhan" style="text-decoration-line : none;">
-                <img src="img/awards_img/gallery.png" alt="이미지로고" style="width: 8%;"> click!
-              </a>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="card mx-0 p-4 mb-0 h-100 award-card">
+                <span class="text-primary award-date">2022.12.14</span>
+                <h5 class="han">실전융합프로젝트 최우수상</h5>
+                <p class="subhan">K-디지털 핵심실무인재양성사업 DCX기반 빅데이터 분석서비스 개발자과정 실전융합프로젝트 최우수상</p>
+                <a href="#smartSaveTheAnimal" data-toggle="modal" class="award-link subhan"><i class="fa fa-image mr-1"></i>상장 보기</a>
+              </div>
             </div>
-          </div>
 
-          <div class="award">
-            <div class="award-icon"></div>
-            <div class="award-content">
-              <span class="date">2021.12.14</span>
-              <h5 class="han">성적우수상(Java P/G)</h5>
-              <p class="subhan">
-                K-디지털 핵심실무인재양성사업 <br />
-                DCX기반 빅데이터 분석서비스 <br />
-                개발자과정 Java Prograimng <br />성적우수상
-              </p>
-              <a href="#smartJava" data-toggle="modal" class="subhan" style="text-decoration-line : none;">
-                <img src="img/awards_img/gallery.png" alt="이미지로고" style="width: 8%;"> click!
-              </a>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="card mx-0 p-4 mb-0 h-100 award-card">
+                <span class="text-primary award-date">2021.12.14</span>
+                <h5 class="han">성적우수상 (Java P/G)</h5>
+                <p class="subhan">K-디지털 핵심실무인재양성사업 DCX기반 빅데이터 분석서비스 개발자과정 Java Programing 성적우수상</p>
+                <a href="#smartJava" data-toggle="modal" class="award-link subhan"><i class="fa fa-image mr-1"></i>상장 보기</a>
+              </div>
             </div>
-          </div>
 
-          <div class="award">
-            <div class="award-icon"></div>
-            <div class="award-content">
-              <span class="date">2021.12.14</span>
-              <h5 class="han">성적우수상(JSP/Servlet)</h5>
-              <p class="subhan">
-                K-디지털 핵심실무인재양성사업
-                DCX기반 빅데이터 분석서비스
-                개발자과정 JSP / Servlet 성적우수상
-              </p>
-              <a href="#smartJSP" data-toggle="modal" class="subhan" style="text-decoration-line : none;">
-                <img src="img/awards_img/gallery.png" alt="이미지로고" style="width: 8%;"> click!
-              </a>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="card mx-0 p-4 mb-0 h-100 award-card">
+                <span class="text-primary award-date">2021.12.14</span>
+                <h5 class="han">성적우수상 (JSP/Servlet)</h5>
+                <p class="subhan">K-디지털 핵심실무인재양성사업 DCX기반 빅데이터 분석서비스 개발자과정 JSP / Servlet 성적우수상</p>
+                <a href="#smartJSP" data-toggle="modal" class="award-link subhan"><i class="fa fa-image mr-1"></i>상장 보기</a>
+              </div>
             </div>
-          </div>
 
-          <div class="award">
-            <div class="award-icon"></div>
-            <div class="award-content">
-              <span class="date">2022.12.14</span>
-              <h5 class="han">모범상</h5>
-              <p class="subhan">
-                K-디지털 핵심실무인재양성사업 <br />
-                DCX기반 빅데이터 분석서비스 <br />
-                개발자과정 모범상
-              </p>
-              <a href="#smartGood" data-toggle="modal" class="subhan" style="text-decoration-line : none;">
-                <img src="img/awards_img/gallery.png" alt="이미지로고" style="width: 8%;"> click!
-              </a>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="card mx-0 p-4 mb-0 h-100 award-card">
+                <span class="text-primary award-date">2022.12.14</span>
+                <h5 class="han">모범상</h5>
+                <p class="subhan">K-디지털 핵심실무인재양성사업 DCX기반 빅데이터 분석서비스 개발자과정 모범상</p>
+                <a href="#smartGood" data-toggle="modal" class="award-link subhan"><i class="fa fa-image mr-1"></i>상장 보기</a>
+              </div>
             </div>
-          </div>
 
-          <div class="award">
-            <div class="award-icon"></div>
-            <div class="award-content">
-              <span class="date">2021.12.02</span>
-              <h5 class="han">컴퓨터공학과 캡스톤디자인 작품 발표회</h5>
-              <p class="subhan">
-                2021학년도 컴퓨터공학과 캡스톤디자인 작품 발표회 최우수상
-              </p>
-              <a href="#schoolAward01" data-toggle="modal" class="subhan" style="text-decoration-line : none;">
-                <img src="img/awards_img/gallery.png" alt="이미지로고" style="width: 8%;" href="#schoolAward01"> click!
-              </a>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="card mx-0 p-4 mb-0 h-100 award-card">
+                <span class="text-primary award-date">2021.12.02</span>
+                <h5 class="han">컴퓨터공학과 캡스톤디자인 작품 발표회</h5>
+                <p class="subhan">2021학년도 컴퓨터공학과 캡스톤디자인 작품 발표회 최우수상</p>
+                <a href="#schoolAward01" data-toggle="modal" class="award-link subhan"><i class="fa fa-image mr-1"></i>상장 보기</a>
+              </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
     </section>
@@ -610,19 +655,11 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="modal-body">
-                <div class="title-bar">
-                  <div class="col-md-12">
-                    <h2 class="text-center">Awards</h2>
-                    <div class="heading-border"></div>
-                  </div>
-                </div>
-                <div class="row">
-                  <img src="img/awards_img/컴공졸작최우수상.png" style=" margin:auto; display:block;" width="50%">
-                </div>
-                <button class="btn btn-general btn-white" type="button" data-dismiss="modal"
-                  style=" margin:auto; display:block;">
-                  <i class="fa fa-times"></i> Close
+              <div class="modal-body text-center award-modal-body">
+                <h3 class="han">컴퓨터공학과 캡스톤디자인 작품 발표회 최우수상</h3>
+                <img class="award-modal-img" src="img/awards_img/컴공졸작최우수상.png" alt="컴퓨터공학과 캡스톤디자인 작품 발표회 최우수상 상장">
+                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                  <i class="fa fa-times mr-1"></i>닫기
                 </button>
               </div>
             </div>
@@ -641,19 +678,11 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="modal-body">
-                <div class="title-bar">
-                  <div class="col-md-12">
-                    <h2 class="text-center">Awards</h2>
-                    <div class="heading-border"></div>
-                  </div>
-                </div>
-                <div class="row">
-                  <img src="img/awards_img/스인개실전프로젝트최우수상.png" style=" margin:auto; display:block;" width="50%">
-                </div>
-                <button class="btn btn-general btn-white" type="button" data-dismiss="modal"
-                  style=" margin:auto; display:block;">
-                  <i class="fa fa-times"></i> Close
+              <div class="modal-body text-center award-modal-body">
+                <h3 class="han">실전융합프로젝트 최우수상</h3>
+                <img class="award-modal-img" src="img/awards_img/스인개실전프로젝트최우수상.png" alt="실전융합프로젝트 최우수상 상장">
+                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                  <i class="fa fa-times mr-1"></i>닫기
                 </button>
               </div>
             </div>
@@ -672,19 +701,11 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="modal-body">
-                <div class="title-bar">
-                  <div class="col-md-12">
-                    <h2 class="text-center">Awards</h2>
-                    <div class="heading-border"></div>
-                  </div>
-                </div>
-                <div class="row">
-                  <img src="img/awards_img/java성적우수상.png" style=" margin:auto; display:block;" width="50%">
-                </div>
-                <button class="btn btn-general btn-white" type="button" data-dismiss="modal"
-                  style=" margin:auto; display:block;">
-                  <i class="fa fa-times"></i> Close
+              <div class="modal-body text-center award-modal-body">
+                <h3 class="han">성적우수상 (Java P/G)</h3>
+                <img class="award-modal-img" src="img/awards_img/java성적우수상.png" alt="성적우수상(Java Programing) 상장">
+                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                  <i class="fa fa-times mr-1"></i>닫기
                 </button>
               </div>
             </div>
@@ -703,19 +724,11 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="modal-body">
-                <div class="title-bar">
-                  <div class="col-md-12">
-                    <h2 class="text-center">Awards</h2>
-                    <div class="heading-border"></div>
-                  </div>
-                </div>
-                <div class="row">
-                  <img src="img/awards_img/jsp성적우수상.png" style=" margin:auto; display:block;" width="50%">
-                </div>
-                <button class="btn btn-general btn-white" type="button" data-dismiss="modal"
-                  style=" margin:auto; display:block;">
-                  <i class="fa fa-times"></i> Close
+              <div class="modal-body text-center award-modal-body">
+                <h3 class="han">성적우수상 (JSP/Servlet)</h3>
+                <img class="award-modal-img" src="img/awards_img/jsp성적우수상.png" alt="성적우수상(JSP/Servlet) 상장">
+                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                  <i class="fa fa-times mr-1"></i>닫기
                 </button>
               </div>
             </div>
@@ -734,19 +747,11 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="modal-body">
-                <div class="title-bar">
-                  <div class="col-md-12">
-                    <h2 class="text-center">Awards</h2>
-                    <div class="heading-border"></div>
-                  </div>
-                </div>
-                <div class="row">
-                  <img src="img/awards_img/스인개모범상.png" style=" margin:auto; display:block;" width="50%">
-                </div>
-                <button class="btn btn-general btn-white" type="button" data-dismiss="modal"
-                  style=" margin:auto; display:block;">
-                  <i class="fa fa-times"></i> Close
+              <div class="modal-body text-center award-modal-body">
+                <h3 class="han">모범상</h3>
+                <img class="award-modal-img" src="img/awards_img/스인개모범상.png" alt="모범상 상장">
+                <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
+                  <i class="fa fa-times mr-1"></i>닫기
                 </button>
               </div>
             </div>
