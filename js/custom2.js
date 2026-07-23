@@ -29,4 +29,14 @@
     }
   });
 
+  // 맨 위로 버튼: 스크롤 거리에 비례한 속도로 경쾌하게 이동
+  $('#scrollTopBtn').click(function(e) {
+    e.preventDefault();
+    var distance = $(window).scrollTop();
+    var duration = Math.min(700, Math.max(350, distance * 0.5));
+    $('html, body').stop(true).animate({
+      scrollTop: 0
+    }, duration, 'easeOutCubic');
+  });
+
 })(jQuery); // End of use strict
