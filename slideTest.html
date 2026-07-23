@@ -1,57 +1,495 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>IT 자격증 정보 제공 웹 서비스 - 발표자료</title>
+  <link rel="shortcut icon" href="img/cat.png">
   <link rel="stylesheet" href="css/slide.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 16px;
+      background: #171a21;
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
+    .slide-page-header {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .slide-page-header h1 {
+      font-size: 1.3rem;
+      margin: 0 0 12px;
+    }
+
+    .back-link {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 0.9rem;
+    }
+
+    .back-link:hover {
+      background: #2f6fed;
+      border-color: #2f6fed;
+    }
+
+    .slides {
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .slide-toast {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: #2f6fed;
+      color: #fff;
+      padding: 12px 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      z-index: 100;
+    }
+
+    .slide-toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  </style>
 </head>
 
 <body>
+  <div class="slide-page-header">
+    <h1>IT 자격증 정보 제공 웹 서비스 &middot; 발표자료 (총 38페이지)</h1>
+    <a class="back-link" href="index.html#projects">&larr; 포트폴리오로 돌아가기</a>
+  </div>
   <ul class="slides">
-
-    <img src="" alt="" width="" height="">
-    <script>
-
-      function slideShow(project) {
-        for (var i = 1; i <= 38; i++) {
-          if (i == 1) {
-            document.writeln('<input type="radio" name="radio-btn" id=img-' + i + ' checked/>');
-          }
-          else {
-            document.writeln('<input type="radio" name="radio-btn" id=img-' + i + ' />');
-          }
-          document.writeln('<li class="slide-container">');
-          document.writeln('<div class="slide">');
-          document.writeln('<img src="img/project_img/' + project + '/PPT/' + i + '.png" /> ');
-          document.writeln('</div>');
-          document.writeln('<div class="nav">');
-          if (i == 38) {
-            document.writeln('<label for="img-' + (i - 1) + '" class="prev">&#x2039;</label>');
-            document.writeln('<label for="img-1" class="next">&#x203a;</label>');
-
-          }
-          else if (i == 1) {
-            document.writeln('<label for="img-38" class="prev">&#x2039;</label>');
-            document.writeln('<label for="img-' + (i + 1) + '" class="next">&#x203a;</label>');
-          }
-          else {
-            document.writeln('<label for="img-' + (i - 1) + '" class="prev">&#x2039;</label>');
-            document.writeln('<label for="img-' + (i + 1) + '" class="next">&#x203a;</label>');
-          }
-
-          document.writeln('</div>');
-          document.writeln('</li>');
-
-        }
-      }
-
-      slideShow("second")
-    </script>
+    <input type="radio" name="radio-btn" id="img-1" checked />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/1.png" alt="발표자료 1페이지" />
+      </div>
+      <div class="nav">
+        <label id="prevFirstBoundary" class="prev">&#x2039;</label>
+        <label for="img-2" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-2" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/2.png" alt="발표자료 2페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-1" class="prev">&#x2039;</label>
+        <label for="img-3" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-3" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/3.png" alt="발표자료 3페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-2" class="prev">&#x2039;</label>
+        <label for="img-4" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-4" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/4.png" alt="발표자료 4페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-3" class="prev">&#x2039;</label>
+        <label for="img-5" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-5" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/5.png" alt="발표자료 5페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-4" class="prev">&#x2039;</label>
+        <label for="img-6" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-6" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/6.png" alt="발표자료 6페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-5" class="prev">&#x2039;</label>
+        <label for="img-7" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-7" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/7.png" alt="발표자료 7페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-6" class="prev">&#x2039;</label>
+        <label for="img-8" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-8" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/8.png" alt="발표자료 8페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-7" class="prev">&#x2039;</label>
+        <label for="img-9" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-9" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/9.png" alt="발표자료 9페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-8" class="prev">&#x2039;</label>
+        <label for="img-10" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-10" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/10.png" alt="발표자료 10페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-9" class="prev">&#x2039;</label>
+        <label for="img-11" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-11" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/11.png" alt="발표자료 11페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-10" class="prev">&#x2039;</label>
+        <label for="img-12" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-12" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/12.png" alt="발표자료 12페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-11" class="prev">&#x2039;</label>
+        <label for="img-13" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-13" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/13.png" alt="발표자료 13페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-12" class="prev">&#x2039;</label>
+        <label for="img-14" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-14" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/14.png" alt="발표자료 14페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-13" class="prev">&#x2039;</label>
+        <label for="img-15" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-15" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/15.png" alt="발표자료 15페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-14" class="prev">&#x2039;</label>
+        <label for="img-16" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-16" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/16.png" alt="발표자료 16페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-15" class="prev">&#x2039;</label>
+        <label for="img-17" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-17" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/17.png" alt="발표자료 17페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-16" class="prev">&#x2039;</label>
+        <label for="img-18" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-18" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/18.png" alt="발표자료 18페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-17" class="prev">&#x2039;</label>
+        <label for="img-19" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-19" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/19.png" alt="발표자료 19페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-18" class="prev">&#x2039;</label>
+        <label for="img-20" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-20" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/20.png" alt="발표자료 20페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-19" class="prev">&#x2039;</label>
+        <label for="img-21" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-21" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/21.png" alt="발표자료 21페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-20" class="prev">&#x2039;</label>
+        <label for="img-22" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-22" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/22.png" alt="발표자료 22페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-21" class="prev">&#x2039;</label>
+        <label for="img-23" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-23" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/23.png" alt="발표자료 23페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-22" class="prev">&#x2039;</label>
+        <label for="img-24" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-24" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/24.png" alt="발표자료 24페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-23" class="prev">&#x2039;</label>
+        <label for="img-25" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-25" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/25.png" alt="발표자료 25페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-24" class="prev">&#x2039;</label>
+        <label for="img-26" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-26" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/26.png" alt="발표자료 26페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-25" class="prev">&#x2039;</label>
+        <label for="img-27" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-27" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/27.png" alt="발표자료 27페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-26" class="prev">&#x2039;</label>
+        <label for="img-28" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-28" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/28.png" alt="발표자료 28페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-27" class="prev">&#x2039;</label>
+        <label for="img-29" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-29" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/29.png" alt="발표자료 29페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-28" class="prev">&#x2039;</label>
+        <label for="img-30" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-30" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/30.png" alt="발표자료 30페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-29" class="prev">&#x2039;</label>
+        <label for="img-31" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-31" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/31.png" alt="발표자료 31페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-30" class="prev">&#x2039;</label>
+        <label for="img-32" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-32" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/32.png" alt="발표자료 32페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-31" class="prev">&#x2039;</label>
+        <label for="img-33" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-33" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/33.png" alt="발표자료 33페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-32" class="prev">&#x2039;</label>
+        <label for="img-34" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-34" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/34.png" alt="발표자료 34페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-33" class="prev">&#x2039;</label>
+        <label for="img-35" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-35" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/35.png" alt="발표자료 35페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-34" class="prev">&#x2039;</label>
+        <label for="img-36" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-36" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/36.png" alt="발표자료 36페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-35" class="prev">&#x2039;</label>
+        <label for="img-37" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-37" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/37.png" alt="발표자료 37페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-36" class="prev">&#x2039;</label>
+        <label for="img-38" class="next">&#x203a;</label>
+      </div>
+    </li>
+    <input type="radio" name="radio-btn" id="img-38" />
+    <li class="slide-container">
+      <div class="slide">
+        <img src="img/project_img/second/PPT/38.png" alt="발표자료 38페이지" />
+      </div>
+      <div class="nav">
+        <label for="img-37" class="prev">&#x2039;</label>
+        <label id="nextLastBoundary" class="next">&#x203a;</label>
+      </div>
+    </li>
   </ul>
+  <div id="slideToast" class="slide-toast"></div>
+  <script>
+    function showSlideToast(msg) {
+      var toast = document.getElementById('slideToast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(window.__slideToastTimer);
+      window.__slideToastTimer = setTimeout(function () {
+        toast.classList.remove('show');
+      }, 1600);
+    }
+    var prevBoundary = document.getElementById('prevFirstBoundary');
+    var nextBoundary = document.getElementById('nextLastBoundary');
+    if (prevBoundary) {
+      prevBoundary.addEventListener('click', function (e) {
+        e.preventDefault();
+        showSlideToast('첫 페이지입니다');
+      });
+    }
+    if (nextBoundary) {
+      nextBoundary.addEventListener('click', function (e) {
+        e.preventDefault();
+        showSlideToast('마지막 페이지입니다');
+      });
+    }
+  </script>
 </body>
 
 </html>

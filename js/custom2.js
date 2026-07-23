@@ -1,14 +1,5 @@
 (function($) {
   "use strict"; // Start of use strict
-  // 깃허브 아이콘 설정
-  $("#githubIcon").mouseover(function(){
-    $(this).css("bottom","5.3%");
-  });
-  $("#githubIcon").mouseout(function(){
-    $(this).css("position","fixed");
-    $(this).css("bottom","5%");
-    $(this).css("right","3%");
-  });
 
   //이니스트에서 일한기간 설정
   var tody = new Date();
@@ -28,5 +19,14 @@
     dayTxt = "년";
   }
   $("#myPeriod").text(Math.ceil(period)+dayTxt);
+
+  // 스크롤 일정 이상 내려갔을 때만 맨 위로 버튼 표시
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 400) {
+      $('#scrollTopBtn').addClass('visible');
+    } else {
+      $('#scrollTopBtn').removeClass('visible');
+    }
+  });
 
 })(jQuery); // End of use strict
