@@ -1316,9 +1316,23 @@ section.resume-section .resume-item .resume-date {
         padding-bottom: 0.6cm !important;
     }
 
+    /* d-flex/flex-column, .card(flex column)는 브라우저가 내부 콘텐츠를
+       페이지 경계에서 제대로 나누지 못해 내용이 잘리며 빈 페이지가 생기는
+       문제가 있어(Chrome 인쇄 flexbox 버그), 인쇄시에는 일반 블록 흐름으로 전환 */
+    section.resume-section,
+    .row.my-auto,
+    .card {
+        display: block !important;
+    }
+
     .row.my-auto {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
+    }
+
+    .career-history-row {
+        break-inside: avoid;
+        page-break-inside: avoid;
     }
 
     /* 제목 바로 뒤에서 페이지가 넘어가 제목만 혼자 남는 것 방지 */
@@ -1400,6 +1414,24 @@ section.resume-section .resume-item .resume-date {
     /* 필터로 숨겨져 있던 프로젝트 카드도 전부 출력 */
     .portfolio-item.filter {
         display: block !important;
+    }
+
+    /* Projects 카드는 줄바꿈시 한 줄에 하나씩 늘어져 보이는 문제 방지 -
+       float 기반 2단 배치(float는 flex/grid와 달리 인쇄시에도 정상적으로
+       페이지 경계에서 나뉨) */
+    #projects .portfolio-item {
+        float: left;
+        width: 48%;
+    }
+
+    #projects .portfolio-item:nth-child(odd) {
+        margin-right: 4%;
+    }
+
+    #projects .row.my-auto::after {
+        content: "";
+        display: table;
+        clear: both;
     }
 
     /* 스크롤 박스로 잘려있던 전체 참여 프로젝트 목록도 전부 출력 */
