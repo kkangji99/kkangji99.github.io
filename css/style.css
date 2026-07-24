@@ -1263,3 +1263,151 @@ section.resume-section .resume-item .resume-date {
 .modal-body video{
     box-shadow: 5px 5px 5px 5px gray;
 }
+
+/*==================================================
+                    PRINT / PDF
+====================================================*/
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+
+    @page {
+        margin: 1.2cm;
+    }
+
+    body {
+        padding: 0 !important;
+        overflow-x: visible !important;
+    }
+
+    #sideNav,
+    .scroll-top-btn,
+    .hero-scroll-cue,
+    .port-head-cont,
+    .close-modal,
+    .etc-project-actions,
+    .video-modal-media,
+    .award-link,
+    #slideDeck,
+    .slide-modal,
+    .no-print {
+        display: none !important;
+    }
+
+    /* 섹션이 화면 한 페이지 높이(100vh)를 채우도록 되어있어 인쇄시
+       제목만 혼자 빈 페이지에 남는 문제를 방지 - 내용 높이만큼만 차지하도록 해제 */
+    section.resume-section {
+        min-height: 0 !important;
+        padding-top: 0.6cm !important;
+        padding-bottom: 0.6cm !important;
+    }
+
+    .row.my-auto {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* 제목 바로 뒤에서 페이지가 넘어가 제목만 혼자 남는 것 방지 */
+    .resume-section h2,
+    #skills h3,
+    #skills h5 {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    /* 섹션은 항상 새 페이지 맨 위에서 시작 (요구사항) */
+    section.resume-section,
+    #skills {
+        break-before: page;
+        page-break-before: always;
+    }
+
+    #about {
+        break-before: auto !important;
+        page-break-before: auto !important;
+    }
+
+    /* 모달을 인쇄시 팝업이 아니라 본문 흐름으로 펼쳐서 노출
+       (height:100%/overflow-y:auto 등 부트스트랩 기본값이 남아있으면
+       빈 공백 페이지가 생길 수 있어 명시적으로 해제) */
+    .modal {
+        display: block !important;
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        background: none !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+        padding: 0 !important;
+    }
+
+    .modal-backdrop {
+        display: none !important;
+    }
+
+    .portfolio-modal .modal-dialog {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0.4cm 0 !important;
+        transform: none !important;
+    }
+
+    .portfolio-modal .modal-content {
+        max-height: none !important;
+        overflow: visible !important;
+        box-shadow: none !important;
+    }
+
+    /* 팝업(프로젝트 상세/상장)은 각각 새 페이지에서 시작 (요구사항) */
+    .modal {
+        break-before: page;
+        page-break-before: always;
+    }
+
+    /* 상장 이미지에 높이 제한이 없어서, 모달 폭이 전체 페이지 너비로
+       늘어나면 이미지도 같이 커져 한 페이지 높이를 넘어가는 문제 방지 */
+    .award-modal-img {
+        width: auto !important;
+        max-width: 100% !important;
+        max-height: 17cm !important;
+        margin: 0 auto 20px auto !important;
+    }
+
+    .award-modal-body h3 {
+        margin-bottom: 0.5cm !important;
+    }
+
+    .portfolio-modal.award-modal .modal-dialog {
+        margin: 0.2cm 0 !important;
+    }
+
+    /* 필터로 숨겨져 있던 프로젝트 카드도 전부 출력 */
+    .portfolio-item.filter {
+        display: block !important;
+    }
+
+    /* 스크롤 박스로 잘려있던 전체 참여 프로젝트 목록도 전부 출력 */
+    .career-history-list {
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    /* 섹션 배경색 전부 제거 (Skills 어두운 배경, Experience/Awards 회색 배경 등) */
+    #skills,
+    #experience,
+    #awards {
+        background: #fff !important;
+    }
+
+    #skills h3,
+    #skills h5,
+    .skill-note {
+        color: var(--ink) !important;
+    }
+
+}
