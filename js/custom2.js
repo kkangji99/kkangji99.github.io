@@ -39,4 +39,12 @@
     }, duration, 'easeOutCubic');
   });
 
+  // 팝업을 닫는 방식(X버튼/바깥 클릭/ESC)과 상관없이 안의 영상은 항상 정지
+  $('.portfolio-modal').on('hidden.bs.modal', function() {
+    $(this).find('video').each(function() {
+      this.pause();
+      this.currentTime = 0;
+    });
+  });
+
 })(jQuery); // End of use strict

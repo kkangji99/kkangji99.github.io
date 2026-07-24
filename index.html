@@ -27,11 +27,6 @@
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="css/slide.css">
   <script>
-    function VideoReset(name) {
-      name.pause();
-      name.currentTime = 0;
-    }
-
     function fncFileDown(url){
             var a = document.createElement('a');
             a.href = url;
@@ -362,7 +357,7 @@
     <div class="portfolio-modal modal fade" id="third" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal" onclick="VideoReset(smartVideo03)">
+          <div class="close-modal" data-dismiss="modal">
             <div class="lr">
               <div class="rl"></div>
             </div>
@@ -415,7 +410,7 @@
     <div class="portfolio-modal modal fade" id="second" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal" onclick="VideoReset(smartVideo02)">
+          <div class="close-modal" data-dismiss="modal">
             <div class="lr">
               <div class="rl"></div>
             </div>
@@ -469,7 +464,7 @@
   <div class="portfolio-modal modal fade" id="first" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal" onclick="VideoReset(smartVideo01)">
+        <div class="close-modal" data-dismiss="modal">
           <div class="lr">
             <div class="rl"></div>
           </div>
