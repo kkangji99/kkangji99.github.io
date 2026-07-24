@@ -489,6 +489,10 @@
         showSlideToast('마지막 페이지입니다');
       });
     }
+    if (window.self !== window.top) {
+      var backLink = document.querySelector('.back-link');
+      if (backLink) backLink.style.display = 'none';
+    }
   </script>
 </body>
 
