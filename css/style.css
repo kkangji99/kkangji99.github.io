@@ -191,6 +191,17 @@ a:active {
                     NAV-BAR
 ====================================================*/
 
+/* #sideNav가 부트스트랩 fixed-top 클래스를 쓰고 있어서, 모달을 열고 닫을 때
+   스크롤바 보정용 padding-right를 부트스트랩 JS가 강제로 붙였다 뗐다 함 -
+   좌측 고정 사이드바에는 필요 없는 동작이라 덜컹거림이 생김. 무효화 */
+#sideNav {
+    padding-right: 0 !important;
+}
+
+body.modal-open {
+    padding-right: 0 !important;
+}
+
 /* 애니메이션 햄버거 -> X 토글 버튼 */
 #sideNav .navbar-toggler {
     position: relative;
