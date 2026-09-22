@@ -18,6 +18,14 @@
 }
 
 @font-face {
+    font-family: 'LINESeedKR-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Rg.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'LINESeedKR-Bd';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
     font-weight: 700;
@@ -1453,4 +1461,73 @@ section.resume-section .resume-item .resume-date {
         color: var(--ink) !important;
     }
 
+}
+/* ===== 프로젝트 모달 본문 가독성 =====
+   소제목과 본문이 같은 굵은 글꼴이라 구분이 안 되던 문제 해결.
+   소제목: 작고 굵게 + 포인트 색 막대 + 구분선 / 본문: 일반 굵기, 옅은 색, 넉넉한 줄간격 */
+.video-modal-info .han,
+.video-modal-media .han {
+    font-family: 'LINESeedKR-Bd';
+    font-size: 0.88rem;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+    margin: 26px 0 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.video-modal-info .han::before,
+.video-modal-media .han::before {
+    content: "";
+    flex: none;
+    width: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--accent);
+}
+.video-modal-info .han:first-of-type,
+.video-modal-media .han:first-of-type {
+    margin-top: 20px;
+    padding-top: 0;
+    border-top: 0;
+}
+.video-modal-info .subhan,
+.video-modal-info li,
+.video-modal-media .subhan,
+.video-modal-media li,
+.etc-project-info .subhan {
+    font-family: 'LINESeedKR-Rg', 'LINESeedKR-Bd', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text);
+}
+.video-modal-info ul,
+.video-modal-media ul {
+    list-style: none;
+    padding-left: 2px;
+}
+.video-modal-info ul li,
+.video-modal-media ul li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 8px;
+}
+.video-modal-info ul li::before,
+.video-modal-media ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.55;
+}
+.video-modal-info p a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
