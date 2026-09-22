@@ -12,7 +12,9 @@
   <meta property="og:image" content="img/profile.jpg">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <link rel="shortcut icon" href="img/cat.png">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="img/favicon-180.png">
   <title>강혜지 포트폴리오</title>
 
   <!-- Global stylesheets -->
@@ -281,6 +283,25 @@
               <div class="etc-project-actions">
                 <a href="https://github.com/kkangji99/Ping" target="_blank" class="etc-btn"><i class="fa fa-github mr-1"></i>GitHub</a>
                 <a href="#ping" data-toggle="modal" class="etc-btn"><i class="fa fa-eye mr-1"></i>상세 보기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 mb-4 portfolio-item filter perPro">
+          <div class="etc-project-card">
+            <img class="img-fluid etc-project-thumb" src="img/project_img/xmas/widget.png" alt="크리스마스 D-day 위젯 화면" loading="lazy">
+            <div class="etc-project-info">
+              <p class="han mb-2">크리스마스 D-day 위젯 · 윈도우 바탕화면 위젯</p>
+              <p class="subhan mb-2" style="font-size: 0.85rem;">추가 설치 없이 윈도우 기본 PowerShell + WPF만으로 동작하는 크리스마스 카운트다운 위젯. 눈 내리는 효과와 캐릭터 클릭 반응까지 직접 구현했습니다</p>
+              <div class="stack-row" style="margin: 0 0 10px;">
+                <span class="stack-pill pill-2">PowerShell</span>
+                <span class="stack-pill pill-1">WPF / XAML</span>
+                <span class="stack-pill pill-3">.NET</span>
+              </div>
+              <div class="etc-project-actions">
+                <a href="https://github.com/kkangji99/xmas-dday-widget" target="_blank" rel="noopener noreferrer" class="etc-btn"><i class="fa fa-github mr-1"></i>GitHub</a>
+                <a href="#xmasWidget" data-toggle="modal" class="etc-btn"><i class="fa fa-eye mr-1"></i>상세 보기</a>
               </div>
             </div>
           </div>
@@ -568,6 +589,53 @@
             </ul>
             <p class="han">코드 및 상세 정보</p>
             <p><a href="https://github.com/kkangji99/Ping" target="_blank"><i class="fa fa-github mr-1"></i>github.com/kkangji99/Ping</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="xmasWidget" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="modal-body video-modal-body">
+          <div class="modal-project-banner">
+            <h2 class="text-center"><span class="han">추가 설치 없이 윈도우 기본 기능만으로 동작하는 크리스마스 D-day 바탕화면 위젯을 만들었습니다.</span></h2>
+          </div>
+          <div class="video-modal-meta">
+            <span><i class="fa fa-user mr-1"></i>개인 프로젝트</span>
+            <span><i class="fa fa-clock-o mr-1"></i>2026.09 · 개인 개발</span>
+          </div>
+          <div class="video-modal-info">
+            <img class="img-fluid mb-4" src="img/project_img/xmas/widget.png" alt="크리스마스 D-day 위젯 화면" loading="lazy">
+            <p class="han">프로젝트 소개</p>
+            <p class="subhan">바탕화면에 항상 떠 있는 크리스마스 카운트다운 위젯입니다. 별도 런타임 설치 없이 윈도우에 기본 포함된 PowerShell과 WPF만으로 동작하도록 만들어, 받아서 바로 실행할 수 있습니다.</p>
+            <p class="han">주요 기능</p>
+            <ul>
+              <li class="subhan">D-day와 남은 일수·시·분·초를 1초마다 갱신, 1년 진행률 바 표시</li>
+              <li class="subhan">21개 멘트가 날짜별로 교체되고 D-100·D-50·D-7·당일 등은 전용 멘트</li>
+              <li class="subhan">루돌프·트리·산타를 클릭하면 각기 다른 반응과 말풍선 출력</li>
+              <li class="subhan">눈 내리는 효과, 드래그 이동과 위치 자동 저장, 마우스 오버 시 반투명</li>
+              <li class="subhan">12월 25일이 지나면 다음 해로 자동 롤오버</li>
+            </ul>
+            <p class="han">배포 편의</p>
+            <ul>
+              <li class="subhan">콘솔 창 없이 실행되는 런처와 단일 EXE 빌드 스크립트 제공</li>
+              <li class="subhan">시작프로그램 등록·해제 배치 파일 포함</li>
+              <li class="subhan">글꼴이 없는 환경에서는 기본 글꼴로 자동 대체</li>
+            </ul>
+            <p class="han">기술 스택</p>
+            <ul>
+              <li class="subhan">PowerShell 5.1, WPF(XAML), .NET Framework</li>
+              <li class="subhan">동작 환경: Windows 7 이상(10·11 권장), 추가 설치 불필요</li>
+            </ul>
+            <p class="han">코드 및 상세 정보</p>
+            <p><a href="https://github.com/kkangji99/xmas-dday-widget" target="_blank" rel="noopener noreferrer"><i class="fa fa-github mr-1"></i>github.com/kkangji99/xmas-dday-widget</a></p>
           </div>
         </div>
       </div>
