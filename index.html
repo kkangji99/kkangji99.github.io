@@ -286,6 +286,27 @@
           </div>
         </div>
 
+        <div class="col-sm-6 mb-4 portfolio-item filter perPro">
+          <div class="etc-project-card">
+            <img class="img-fluid etc-project-thumb" src="img/project_img/nyanta/gameplay.png" alt="냥타의 고군분투 게임 플레이 화면" loading="lazy">
+            <div class="etc-project-info">
+              <p class="han mb-2">냥타의 고군분투 · 크리스마스 서바이벌 게임</p>
+              <p class="subhan mb-2" style="font-size: 0.85rem;">고양이 산타가 눈사람 군단 속에서 5분을 버티는 브라우저 게임. 이미지 없이 캔버스로 캐릭터를 직접 그리고, 온라인 랭킹까지 붙였습니다</p>
+              <div class="stack-row" style="margin: 0 0 10px;">
+                <span class="stack-pill pill-2">JavaScript</span>
+                <span class="stack-pill pill-1">Canvas</span>
+                <span class="stack-pill pill-6">Supabase</span>
+                <span class="stack-pill pill-3">GitHub Pages</span>
+              </div>
+              <div class="etc-project-actions">
+                <a href="https://kkangji99.github.io/nyanta-game/" target="_blank" rel="noopener noreferrer" class="etc-btn"><i class="fa fa-gamepad mr-1"></i>플레이</a>
+                <a href="https://github.com/kkangji99/nyanta-game" target="_blank" rel="noopener noreferrer" class="etc-btn"><i class="fa fa-github mr-1"></i>GitHub</a>
+                <a href="#nyanta" data-toggle="modal" class="etc-btn"><i class="fa fa-eye mr-1"></i>상세 보기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="col-sm-6 mb-4 portfolio-item filter teamPro">
           <div class="etc-project-card">
             <img class="img-fluid etc-project-thumb" src="img/project_img/third/file/메인 사이즈 조정 완료.png" alt="유기/유실 동물 등록 및 찾기 서비스">
@@ -547,6 +568,53 @@
             </ul>
             <p class="han">코드 및 상세 정보</p>
             <p><a href="https://github.com/kkangji99/Ping" target="_blank"><i class="fa fa-github mr-1"></i>github.com/kkangji99/Ping</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="nyanta" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="modal-body video-modal-body">
+          <div class="modal-project-banner">
+            <h2 class="text-center"><span class="han">고양이 산타가 눈사람 군단 속에서 5분을 버티는 크리스마스 서바이벌 게임을 개인 프로젝트로 만들었습니다.</span></h2>
+          </div>
+          <div class="video-modal-meta">
+            <span><i class="fa fa-user mr-1"></i>개인 프로젝트</span>
+            <span><i class="fa fa-clock-o mr-1"></i>2026.09 · 개인 개발</span>
+          </div>
+          <div class="video-modal-info">
+            <img class="img-fluid mb-4" src="img/project_img/nyanta/gameplay.png" alt="냥타의 고군분투 게임 플레이 화면" loading="lazy">
+            <p class="han">프로젝트 소개</p>
+            <p class="subhan">고양이 산타 '냥타'가 눈보라 대왕의 눈사람 군단에 포위된 채 크리스마스 아침까지 5분을 버티는 브라우저 게임입니다. 고등어(경험치)를 모아 레벨을 올리고, 눈덩이·징글벨·캔디케인 등 10가지 강화 중에서 골라 성장합니다.</p>
+            <p class="han">주요 기능</p>
+            <ul>
+              <li class="subhan">이미지 파일 없이 캔버스 도형만으로 캐릭터·아이템·배경을 직접 그림</li>
+              <li class="subhan">2분마다 발동하는 '집사 찬스'(무적·연사)와 마지막 30초 '눈사람의 분노'(눈벼락) 등 시간대별 연출</li>
+              <li class="subhan">Supabase 기반 온라인 랭킹: 닉네임 등록, TOP 10, 내 순위 표시</li>
+              <li class="subhan">PC 키보드와 모바일 터치 조이스틱 지원, 이벤트별 진동 피드백</li>
+            </ul>
+            <p class="han">최적화와 보안</p>
+            <ul>
+              <li class="subhan">스프라이트 캐시·화면 밖 컬링·경로 묶어 그리기로 적 80마리 상황에서 렌더링 3ms 유지(60fps 예산의 약 18%)</li>
+              <li class="subhan">CSP로 외부 접속을 랭킹 서버와 폰트로 제한, DB는 조회·등록만 허용하고 값 범위 검사로 비정상 점수 차단</li>
+            </ul>
+            <p class="han">기술 스택</p>
+            <ul>
+              <li class="subhan">Frontend: JavaScript(ES2020+), HTML5 Canvas, CSS</li>
+              <li class="subhan">Backend: Supabase (PostgreSQL, RLS, PostgREST)</li>
+              <li class="subhan">배포: GitHub Pages</li>
+            </ul>
+            <p class="han">플레이 및 코드</p>
+            <p><a href="https://kkangji99.github.io/nyanta-game/" target="_blank" rel="noopener noreferrer"><i class="fa fa-gamepad mr-1"></i>게임 플레이하기</a></p>
+            <p><a href="https://github.com/kkangji99/nyanta-game" target="_blank" rel="noopener noreferrer"><i class="fa fa-github mr-1"></i>github.com/kkangji99/nyanta-game</a></p>
           </div>
         </div>
       </div>
