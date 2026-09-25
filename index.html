@@ -328,6 +328,27 @@
           </div>
         </div>
 
+        <div class="col-sm-6 mb-4 portfolio-item filter perPro">
+          <div class="etc-project-card">
+            <img class="img-fluid etc-project-thumb" src="img/project_img/nyanfly/gameplay.png" alt="nyanfly 게임 플레이 화면" loading="lazy">
+            <div class="etc-project-info">
+              <p class="han mb-2">nyanfly · 원버튼 물리 아케이드 게임</p>
+              <p class="subhan mb-2" style="font-size: 0.85rem;">냥이를 대포로 날려 비거리를 겨루는 브라우저 게임. 버튼 하나로 각도·파워·공중 타이밍을 잡고, 같은 입력이면 항상 같은 결과가 나오는 결정론 물리로 리플레이 검증까지 설계했습니다</p>
+              <div class="stack-row" style="margin: 0 0 10px;">
+                <span class="stack-pill pill-2">JavaScript</span>
+                <span class="stack-pill pill-1">Canvas</span>
+                <span class="stack-pill pill-6">Web Audio</span>
+                <span class="stack-pill pill-3">GitHub Pages</span>
+              </div>
+              <div class="etc-project-actions">
+                <a href="https://kkangji99.github.io/nyanfly/" target="_blank" rel="noopener noreferrer" class="etc-btn"><i class="fa fa-gamepad mr-1"></i>플레이</a>
+                <a href="https://github.com/kkangji99/nyanfly" target="_blank" rel="noopener noreferrer" class="etc-btn"><i class="fa fa-github mr-1"></i>GitHub</a>
+                <a href="#nyanfly" data-toggle="modal" class="etc-btn"><i class="fa fa-eye mr-1"></i>상세 보기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="col-sm-6 mb-4 portfolio-item filter teamPro">
           <div class="etc-project-card">
             <img class="img-fluid etc-project-thumb" src="img/project_img/third/file/메인 사이즈 조정 완료.png" alt="유기/유실 동물 등록 및 찾기 서비스">
@@ -683,6 +704,54 @@
             <p class="han">플레이 및 코드</p>
             <p><a href="https://kkangji99.github.io/nyanta-game/" target="_blank" rel="noopener noreferrer"><i class="fa fa-gamepad mr-1"></i>게임 플레이하기</a></p>
             <p><a href="https://github.com/kkangji99/nyanta-game" target="_blank" rel="noopener noreferrer"><i class="fa fa-github mr-1"></i>github.com/kkangji99/nyanta-game</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="nyanfly" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="modal-body video-modal-body">
+          <div class="modal-project-banner">
+            <h2 class="text-center"><span class="han">냥이를 대포로 날려 비거리를 겨루는 원버튼 물리 아케이드 게임을 개인 프로젝트로 만들었습니다.</span></h2>
+          </div>
+          <div class="video-modal-meta">
+            <span><i class="fa fa-user mr-1"></i>개인 프로젝트</span>
+            <span><i class="fa fa-clock-o mr-1"></i>2026.09 · 개인 개발</span>
+          </div>
+          <div class="video-modal-info">
+            <img class="img-fluid mb-4" src="img/project_img/nyanfly/gameplay.png" alt="nyanfly 게임 플레이 화면" loading="lazy">
+            <p class="han">프로젝트 소개</p>
+            <p class="subhan">대포에 탄 냥이를 날려 얼마나 멀리 가는지 겨루는 브라우저 게임입니다. 클릭 한 번으로 각도, 한 번으로 파워를 정하고, 날아가는 동안 구름·새·지면에 닿는 순간을 맞춰 누르면 가속합니다. 판마다 얻는 츄르로 화력·조준·공기저항 등 6가지 업그레이드를 올리며 기록을 늘려 갑니다.</p>
+            <p class="han">주요 기능</p>
+            <ul>
+              <li class="subhan">버튼 하나로 각도 → 파워 → 공중 타이밍까지 이어지는 원버튼 조작, 연속 성공 시 콤보</li>
+              <li class="subhan">이미지·음원 파일 없이 캔버스로 캐릭터와 배경을 그리고, 효과음은 Web Audio로 즉석 합성</li>
+              <li class="subhan">히트스톱·카메라 펀치·섬광·입자로 타격감을 내고, 발사 전 궤적 미리보기 제공</li>
+              <li class="subhan">PC 마우스·키보드와 모바일 터치 지원, 모바일은 가로 화면으로 고정</li>
+            </ul>
+            <p class="han">설계 포인트</p>
+            <ul>
+              <li class="subhan">물리 시뮬레이션을 화면과 분리하고 고정 타임스텝·자체 난수·다항식 삼각함수로 만들어, 같은 입력이면 어느 기기에서도 같은 결과가 나오도록 설계(리플레이로 기록 검증)</li>
+              <li class="subhan">지형과 오브젝트를 배열로 들지 않고 시드 해시로 즉석 계산해 코스 길이와 무관하게 메모리 일정</li>
+              <li class="subhan">매 프레임 객체 생성을 없애고 입자를 고정 크기 풀로 재사용, 화면 밖은 계산하지 않음</li>
+              <li class="subhan">CSP로 외부 접속을 제한하고, GitHub Actions에서 결정론 테스트를 통과해야만 배포</li>
+            </ul>
+            <p class="han">기술 스택</p>
+            <ul>
+              <li class="subhan">Frontend: JavaScript(ES Modules), HTML5 Canvas, Web Audio API, CSS</li>
+              <li class="subhan">테스트·배포: Node.js 테스트 러너, GitHub Actions, GitHub Pages</li>
+            </ul>
+            <p class="han">플레이 및 코드</p>
+            <p><a href="https://kkangji99.github.io/nyanfly/" target="_blank" rel="noopener noreferrer"><i class="fa fa-gamepad mr-1"></i>게임 플레이하기</a></p>
+            <p><a href="https://github.com/kkangji99/nyanfly" target="_blank" rel="noopener noreferrer"><i class="fa fa-github mr-1"></i>github.com/kkangji99/nyanfly</a></p>
           </div>
         </div>
       </div>
