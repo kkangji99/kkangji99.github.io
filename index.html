@@ -395,29 +395,6 @@
 
         <div class="col-sm-6 mb-4 portfolio-item filter perPro">
           <div class="etc-project-card">
-            <div class="etc-project-placeholder">
-              <i class="fa fa-rocket"></i>
-            </div>
-            <div class="etc-project-info">
-              <p class="han mb-2">nyanfly · 원버튼 물리 아케이드 게임</p>
-              <p class="subhan mb-2" style="font-size: 0.85rem;">냥이를 대포로 날려 비거리를 겨루는 브라우저 게임. 같은 입력이면 언제나 같은 결과가 나오도록 시뮬레이션과 화면 표현을 분리해 설계했습니다</p>
-              <div class="stack-row" style="margin: 0 0 10px;">
-                <span class="stack-pill pill-2">JavaScript</span>
-                <span class="stack-pill pill-1">Canvas</span>
-                <span class="stack-pill pill-6">Supabase</span>
-                <span class="stack-pill pill-3">GitHub Actions</span>
-              </div>
-              <div class="etc-project-actions">
-                <a href="https://kkangji99.github.io/nyanfly/" target="_blank" rel="noopener noreferrer" class="etc-btn"><i class="fa fa-gamepad mr-1"></i>플레이</a>
-                <a href="https://github.com/kkangji99/nyanfly" target="_blank" rel="noopener noreferrer" class="etc-btn"><i class="fa fa-github mr-1"></i>GitHub</a>
-                <a href="#nyanfly" data-toggle="modal" class="etc-btn"><i class="fa fa-eye mr-1"></i>상세 보기</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 mb-4 portfolio-item filter perPro">
-          <div class="etc-project-card">
             <img class="img-fluid etc-project-thumb" src="img/project_img/xmas/widget.png" alt="크리스마스 D-day 위젯 화면" loading="lazy">
             <div class="etc-project-info">
               <p class="han mb-2">크리스마스 D-day 위젯 · 윈도우 바탕화면 위젯</p>
@@ -811,48 +788,6 @@
             <p class="han">플레이 및 코드</p>
             <p><a href="https://kkangji99.github.io/nyanta-game/" target="_blank" rel="noopener noreferrer"><i class="fa fa-gamepad mr-1"></i>게임 플레이하기</a></p>
             <p><a href="https://github.com/kkangji99/nyanta-game" target="_blank" rel="noopener noreferrer"><i class="fa fa-github mr-1"></i>github.com/kkangji99/nyanta-game</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="portfolio-modal modal fade" id="nyanfly" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="modal-body video-modal-body">
-          <div class="modal-project-banner">
-            <h2 class="text-center"><span class="han">냥이를 대포로 날려 비거리를 겨루는 원버튼 물리 아케이드 게임을 개인 프로젝트로 만들었습니다.</span></h2>
-          </div>
-          <div class="video-modal-meta">
-            <span><i class="fa fa-user mr-1"></i>개인 프로젝트</span>
-            <span><i class="fa fa-clock-o mr-1"></i>2026.09 · 개인 개발</span>
-          </div>
-          <div class="video-modal-info">
-            <p class="han">프로젝트 소개</p>
-            <p class="subhan">클릭 한 번으로 각도를, 또 한 번으로 파워를 정해 냥이를 발사하고, 비행 중 구름·새·지면에 닿는 순간을 맞춰 가속하는 게임입니다. 한 판에서 번 재화로 업그레이드를 사면 다음 판에 더 멀리 날아갑니다. 빌드 과정과 외부 의존성 없이 브라우저에서 바로 실행됩니다.</p>
-            <p class="han">설계 포인트</p>
-            <ul>
-              <li class="subhan">시뮬레이션(물리·충돌·지형 생성)과 화면 표현을 분리해, 시드와 입력 기록만으로 한 판의 결과가 언제나 똑같이 재현되도록 구성</li>
-              <li class="subhan">같은 구조 하나로 상위 기록 리플레이와 기록 검증이 가능하도록 설계</li>
-              <li class="subhan">재현성·리플레이·밸런스를 확인하는 자동 테스트와 밸런스·성능 점검 스크립트 작성</li>
-            </ul>
-            <p class="han">AI 활용 개발</p>
-            <p class="subhan">Claude Code와 설계 문서를 먼저 작성한 뒤 테스트, 구현 순서로 진행했습니다. 프로젝트 규칙 파일에 설계 원칙을 적어 두어 기능을 추가할 때마다 같은 기준으로 점검합니다.</p>
-            <p class="han">기술 스택</p>
-            <ul>
-              <li class="subhan">Frontend: JavaScript(ES 모듈), HTML5 Canvas, CSS</li>
-              <li class="subhan">랭킹: 기본은 기기 내 저장, 선택적으로 Supabase 연동</li>
-              <li class="subhan">테스트·배포: Node.js 내장 테스트 러너, GitHub Actions, GitHub Pages</li>
-            </ul>
-            <p class="han">플레이 및 코드</p>
-            <p><a href="https://kkangji99.github.io/nyanfly/" target="_blank" rel="noopener noreferrer"><i class="fa fa-gamepad mr-1"></i>게임 플레이하기</a></p>
-            <p><a href="https://github.com/kkangji99/nyanfly" target="_blank" rel="noopener noreferrer"><i class="fa fa-github mr-1"></i>github.com/kkangji99/nyanfly</a></p>
           </div>
         </div>
       </div>
