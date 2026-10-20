@@ -396,6 +396,48 @@
 
         <div class="col-sm-6 mb-4 portfolio-item filter perPro">
           <div class="etc-project-card">
+            <img class="img-fluid etc-project-thumb" src="img/project_img/memoplus/notes.png" alt="메모플러스 메모 창 화면" loading="lazy">
+            <div class="etc-project-info">
+              <p class="han mb-2">메모플러스(Memo+) · Windows 데스크톱 메모 앱</p>
+              <p class="subhan mb-2" style="font-size: 0.85rem;">Windows 스티커 메모를 분석해 다시 만든 데스크톱 메모 프로그램. 하트·구름 모양 스티커, 할 일 목록, 메모 암호화에 설치·자동 업데이트까지 갖춰 실제로 배포하고 있습니다</p>
+              <div class="stack-row" style="margin: 0 0 10px;">
+                <span class="stack-pill pill-1">Java 21</span>
+                <span class="stack-pill pill-2">Swing · FlatLaf</span>
+                <span class="stack-pill pill-6">jpackage</span>
+                <span class="stack-pill pill-3">GitHub Releases</span>
+              </div>
+              <div class="etc-project-actions">
+                <a href="https://github.com/kkangji99/MemoPlus/releases/latest" target="_blank" rel="noopener noreferrer" class="etc-btn"><i class="fa fa-download mr-1"></i>다운로드</a>
+                <a href="https://github.com/kkangji99/MemoPlus" target="_blank" rel="noopener noreferrer" class="etc-btn"><i class="fa fa-github mr-1"></i>GitHub</a>
+                <a href="#memoplus" data-toggle="modal" class="etc-btn"><i class="fa fa-eye mr-1"></i>상세 보기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 mb-4 portfolio-item filter perPro">
+          <div class="etc-project-card">
+            <img class="img-fluid etc-project-thumb" src="img/project_img/faterun/gameplay.png" alt="운명 피하기 게임 플레이 화면" loading="lazy">
+            <div class="etc-project-info">
+              <p class="han mb-2">운명 피하기 · 사주 연동 캐주얼 게임</p>
+              <p class="subhan mb-2" style="font-size: 0.85rem;">생년월일을 넣으면 사주(만세력)를 계산해 캐릭터·천적·럭키템이 정해지고, 하늘에서 떨어지는 운명을 손가락 하나로 피하는 브라우저 게임. 결과는 공유용 카드로 만들어 줍니다</p>
+              <div class="stack-row" style="margin: 0 0 10px;">
+                <span class="stack-pill pill-2">JavaScript</span>
+                <span class="stack-pill pill-1">Phaser 3</span>
+                <span class="stack-pill pill-6">Canvas · Web Audio</span>
+                <span class="stack-pill pill-3">GitHub Actions</span>
+              </div>
+              <div class="etc-project-actions">
+                <a href="https://kkangji99.github.io/faterun/" target="_blank" rel="noopener noreferrer" class="etc-btn"><i class="fa fa-gamepad mr-1"></i>플레이</a>
+                <a href="https://github.com/kkangji99/faterun" target="_blank" rel="noopener noreferrer" class="etc-btn"><i class="fa fa-github mr-1"></i>GitHub</a>
+                <a href="#faterun" data-toggle="modal" class="etc-btn"><i class="fa fa-eye mr-1"></i>상세 보기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 mb-4 portfolio-item filter perPro">
+          <div class="etc-project-card">
             <img class="img-fluid etc-project-thumb" src="img/project_img/xmas/widget.png" alt="크리스마스 D-day 위젯 화면" loading="lazy">
             <div class="etc-project-info">
               <p class="han mb-2">크리스마스 D-day 위젯 · 윈도우 바탕화면 위젯</p>
@@ -716,6 +758,112 @@
             </ul>
             <p class="han">코드 및 상세 정보</p>
             <p><a href="https://github.com/kkangji99/Ping" target="_blank"><i class="fa fa-github mr-1"></i>github.com/kkangji99/Ping</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="memoplus" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="modal-body video-modal-body">
+          <div class="modal-project-banner">
+            <h2 class="text-center"><span class="han">Windows 스티커 메모를 분석해 더 편하게 다시 만든 데스크톱 메모 앱을 개인 프로젝트로 만들고 배포하고 있습니다.</span></h2>
+          </div>
+          <div class="video-modal-meta">
+            <span><i class="fa fa-user mr-1"></i>개인 프로젝트</span>
+            <span><i class="fa fa-clock-o mr-1"></i>2026.10 · 개인 개발 · v1.0.0 → v1.1.3</span>
+          </div>
+          <div class="video-modal-info">
+            <img class="img-fluid mb-4" src="img/project_img/memoplus/notes.png" alt="메모플러스 메모 창 화면" loading="lazy">
+            <p class="han">프로젝트 소개</p>
+            <p class="subhan">Windows 스티커 메모의 사용감은 그대로 두고, 없던 기능(할 일 목록, 메모 잠금, 꾸미기, 알림, 백업)을 채운 데스크톱 메모 프로그램입니다. 자바 런타임을 함께 묶어 배포하므로 Java 설치 없이 압축만 풀면 실행되고, 이후에는 앱이 스스로 새 버전을 받아 업데이트합니다.</p>
+            <p class="han">주요 기능</p>
+            <ul>
+              <li class="subhan">메모 창 여러 개, 색 7가지, 스티커 모양 6가지(사각·동그라미·하트·별·구름·말풍선), 디자인 7종(심플·아기자기·계절별)과 다크 모드</li>
+              <li class="subhan">굵게·기울임·밑줄·취소선, 글머리 기호와 할 일 목록(들여쓰기), 이미지 붙여넣기, 링크 열기</li>
+              <li class="subhan">메모 목록 검색·즐겨찾기·끌어서 정렬, 휴지통(30일), 정한 시각 알림, 하루 한 번 자동 백업</li>
+              <li class="subhan">어디서든 새 메모(Ctrl+Alt+M), 알림 영역 아이콘, Windows 검색에서 "메모"로 실행, 기존 스티커 메모 가져오기</li>
+            </ul>
+            <p class="han">설계 포인트</p>
+            <ul>
+              <li class="subhan"><b>원본 분석:</b> 스티커 메모는 .NET Native로 컴파일돼 디컴파일이 불가능해서, 로컬 DB(SQLite) 스키마와 본문 서식 토큰·리소스 문자열을 분석해 데이터 구조를 파악하고 같은 방식의 본문 형식으로 설계 → 기존 메모를 그대로 가져올 수 있게 함</li>
+              <li class="subhan"><b>안전한 자동 업데이트:</b> GitHub Releases에서 새 버전을 받되, 이 저장소의 다운로드 주소만 허용하고 GitHub이 알려 주는 SHA-256과 일치할 때만 설치. 실패하면 기존 버전으로 그대로 실행</li>
+              <li class="subhan"><b>메모 잠금:</b> AES-256-GCM으로 암호화하고 키는 Windows DPAPI로 보호. 암호화에 실패하면 평문을 저장하지 않도록 처리</li>
+              <li class="subhan"><b>데이터 보호:</b> 메모마다 파일로 저장하되 임시 파일에 쓴 뒤 원자적으로 교체해 저장 중 꺼져도 깨지지 않게 하고, 파일 이름이 되는 ID를 검증해 조작된 파일이 메모 폴더 밖에 쓰지 못하게 함</li>
+              <li class="subhan"><b>네이티브 기능:</b> 전역 단축키는 추가 라이브러리 없이 JDK 외부 함수 API(FFM)로 Win32 API를 직접 호출하고, 사용할 수 없는 환경에서는 단축키 없이 정상 동작하도록 분리</li>
+              <li class="subhan"><b>배포:</b> jpackage·jlink로 런타임을 포함한 앱 이미지를 만들고, 앱 안에서 사용자 폴더 설치·앱 목록 등록·제거까지 지원. 4일간 20여 차례 릴리스하며 사용 중 발견한 문제를 바로 반영</li>
+            </ul>
+            <p class="han">기술 스택</p>
+            <ul>
+              <li class="subhan">App: Java 21, Swing, FlatLaf, Java FFM API(Win32)</li>
+              <li class="subhan">보안: AES-256-GCM, Windows DPAPI, SHA-256 검증</li>
+              <li class="subhan">배포: jpackage, jlink, PowerShell 릴리스 스크립트, GitHub Releases</li>
+            </ul>
+            <p class="han">다운로드 및 코드</p>
+            <p><a href="https://github.com/kkangji99/MemoPlus/releases/latest" target="_blank" rel="noopener noreferrer"><i class="fa fa-windows mr-1"></i>최신 버전 다운로드 (Windows)</a></p>
+            <p><a href="https://github.com/kkangji99/MemoPlus" target="_blank" rel="noopener noreferrer"><i class="fa fa-github mr-1"></i>github.com/kkangji99/MemoPlus</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="faterun" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="modal-body video-modal-body">
+          <div class="modal-project-banner">
+            <h2 class="text-center"><span class="han">생년월일로 사주를 계산해 내 팔자대로 떨어지는 운명을 피하는 캐주얼 게임을 개인 프로젝트로 만들었습니다.</span></h2>
+          </div>
+          <div class="video-modal-meta">
+            <span><i class="fa fa-user mr-1"></i>개인 프로젝트</span>
+            <span><i class="fa fa-clock-o mr-1"></i>2026.09 · 개인 개발</span>
+          </div>
+          <div class="video-modal-info">
+            <img class="img-fluid mb-4" src="img/project_img/faterun/gameplay.png" alt="운명 피하기 게임 플레이 화면" loading="lazy">
+            <p class="han">프로젝트 소개</p>
+            <p class="subhan">생년월일시를 입력하면 만세력으로 사주를 계산해 캐릭터(본캐), 천적, 럭키템, 팔자 스킬, 오늘의 운세가 정해집니다. 게임은 손가락 하나로 좌우로 움직이며 내 색깔은 먹고 나머지는 피하는 방식이고, 끝나면 "사인(死因)"과 "오늘의 액땜 성공률"이 담긴 공유용 결과 카드를 만들어 줍니다.</p>
+            <p class="han">주요 기능</p>
+            <ul>
+              <li class="subhan">만세력 계산: 율리우스 적일 기반 일주, 입춘 기준 년주, 절기 기준 월주, 시두법 시주</li>
+              <li class="subhan">사주를 게임 언어로 번역: 일간 → 캐릭터, 나를 극하는 오행 → 천적(3배 자주 등장), 용신 → 럭키템, 신살 → 팔자 스킬, 일진 → 오늘의 운세</li>
+              <li class="subhan">오행마다 다른 움직임(솟기·굴러오기·가속·지그재그·폭발), 아슬아슬 회피 보너스와 럭키타임, 시간에 따라 빨라지는 웨이브 패턴</li>
+              <li class="subhan">1080×1920 결과 카드를 캔버스로 그려 Web Share API로 공유, PC·모바일 가로/세로 화면 대응</li>
+            </ul>
+            <p class="han">개선 과정</p>
+            <ul>
+              <li class="subhan"><b>문제:</b> 첫 버전은 사주 용어(일간·용신·신살)가 그대로 노출되고 조작과 무관한 스탯 계산이라 "어렵고 재미없다"는 피드백을 받음</li>
+              <li class="subhan"><b>1차 개선:</b> 용어를 "본캐·천적·럭키템"으로 바꾸고 오행 상성을 가위바위보식 변신 조작으로 만들었으나, 다섯 가지 상성을 외워야 하는 부담이 남음</li>
+              <li class="subhan"><b>2차 개선:</b> 규칙을 "내 색깔은 먹고 나머지는 피한다" 하나로 줄이고 사주는 등장 빈도·아이템·스킬에만 반영. 위험할수록 점수가 커지는 아슬아슬 보너스로 손맛을 보강</li>
+              <li class="subhan"><b>검증:</b> 브라우저 자동화(Playwright)로 회피 봇을 돌려 난이도를 수치로 확인(가만히 있으면 약 24초, 잘 피하면 약 60초 생존)하고, 이 과정에서 점수 배율 미적용·바닥 충돌 버그를 찾아 수정</li>
+            </ul>
+            <p class="han">설계 포인트</p>
+            <ul>
+              <li class="subhan">사주 계산·게임 규칙·패턴 생성을 Phaser와 분리한 순수 함수로 작성해 Node 테스트 러너로 검증, 씬은 연출만 담당</li>
+              <li class="subhan">화면에 보이는 모든 문구를 한 파일에 모아 말투·밸런스를 코드 수정 없이 조정</li>
+              <li class="subhan">이미지·음원 파일 없이 캐릭터·물체를 캔버스로 그리고 효과음은 Web Audio로 합성</li>
+              <li class="subhan">GitHub Actions에서 테스트를 통과해야만 GitHub Pages로 배포</li>
+            </ul>
+            <p class="han">기술 스택</p>
+            <ul>
+              <li class="subhan">Frontend: JavaScript(ES Modules), Phaser 3, HTML5 Canvas, Web Audio API, Web Share API</li>
+              <li class="subhan">테스트·배포: Node.js 테스트 러너, Playwright, GitHub Actions, GitHub Pages</li>
+            </ul>
+            <p class="han">플레이 및 코드</p>
+            <p><a href="https://kkangji99.github.io/faterun/" target="_blank" rel="noopener noreferrer"><i class="fa fa-gamepad mr-1"></i>게임 플레이하기</a></p>
+            <p><a href="https://github.com/kkangji99/faterun" target="_blank" rel="noopener noreferrer"><i class="fa fa-github mr-1"></i>github.com/kkangji99/faterun</a></p>
           </div>
         </div>
       </div>
